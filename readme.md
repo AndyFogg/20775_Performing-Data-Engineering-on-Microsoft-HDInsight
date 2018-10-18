@@ -1,8 +1,8 @@
-# 20775A: 20775 Perform Cloud Data Science with Azure Machine Learning
+# 20775A: Performing Data Engineering on Microsoft HDInsight
 
 ## What are we doing?
 
-- To support course 20775 Perform Cloud Data Science with Azure Machine Learning, we will need to make frequent updates to the course content to keep it current with the Azure services used in the course. We are publishing the lab instructions and lab files on GitHub to allow for open contributions between the course authors and MCTs to keep the content current with changes in the Azure platform.
+- To support course 20775 PPerforming Data Engineering on Microsoft HDInsight, we will need to make frequent updates to the course content to keep it current with the Azure services used in the course. We are publishing the lab instructions and lab files on GitHub to allow for open contributions between the course authors and MCTs to keep the content current with changes in the Azure platform.
 - We hope that this brings a sense of collaboration to the labs like we've never had before - when Azure changes and you find it first during a live delivery, go ahead and make an enhancement right in the lab source. Help your fellow MCTs.
 
 ## How should I use these files relative to the released MOC files?
