@@ -1,0 +1,19 @@
+﻿#TODO: Check if $resourceGroupName exists. If not promot for RG name
+If ($resourceGroupName){
+
+Write-Host -ForegroundColor Green "Removing Resource Group named $($resourceGroupName). Press Yes to verify."
+Remove-AzureRmResourceGroup $resourceGroupName
+Write-Host -ForegroundColor Green "Verify resource group deleted via the Azure portal."
+
+}
+else {
+
+Write-Host "Enter name of resource group to delete"
+$userEnteredRGName = Read-Host
+Write-Host -ForegroundColor Green "Removing Resource Group named $($userEnteredRGName)"
+Remove-AzureRmResourceGroup $userEnteredRGName
+
+}
+
+
+

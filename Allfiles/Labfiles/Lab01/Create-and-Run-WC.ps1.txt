@@ -1,0 +1,152 @@
+﻿
+Write-host -ForegroundColor Green "Hello! The first step in this lab is to login to your Azure account using your Microsoft credentials."
+Write-host -ForegroundColor Green "Make sure to use the email address you used when activating your azure pass!"
+Write-host -ForegroundColor Yellow "Press ENTER to continue"
+
+$notNeeded = Read-Host 
+
+Login-AzureRmAccount
+
+
+function Get-Sub
+{
+$Subs = Get-AzureRmSubscription 
+Write-host -ForegroundColor Green "In which subscription would you like to create your HDInsight Cluster?"
+$loopCounter = 0;
+ForEach( $individualSub In $Subs)
+{
+Write-Host "$loopCounter $($individualSub.SubscriptionName)";
+$loopCounter++
+
+}
+
+Write-host -ForegroundColor Yellow "Please enter the corresponding number of the subscription you would like to use"
+$subNum = Read-Host
+$Subs[$subNum]
+}
+
+$Sub = Get-Sub
+ 
+
+
+$token = "$(Get-Random)"
+$subscriptionID = $($sub.SubscriptionId)        # Provide your Subscription Name
+
+$resourceGroupName = "$($token)rg"      # Provide a Resource Group name
+$clusterName = "a$($token)"
+$defaultStorageAccountName = $token + "store"   # Provide a Storage account name
+$defaultStorageContainerName = $token + "container"
+$location = "East US 2"     # Change the location if needed
+$clusterNodes = 1           # The number of nodes in the HDInsight cluster
+
+
+# Select the subscription to use if you have multiple subscriptions
+$notNeeded = Select-AzureRmSubscription -SubscriptionId $subscriptionID
+
+
+# Create an Azure Resource Group
+New-AzureRmResourceGroup -Name $resourceGroupName -Location $location
+
+# Create an Azure Storage account and container used as the default storage
+New-AzureRmStorageAccount `
+    -ResourceGroupName $resourceGroupName `
+    -StorageAccountName $defaultStorageAccountName `
+    -Location $location `
+    -Type Standard_LRS
+$defaultStorageAccountKey = (Get-AzureRmStorageAccountKey -Name $defaultStorageAccountName -ResourceGroupName $resourceGroupName)[0].Value
+$destContext = New-AzureStorageContext -StorageAccountName $defaultStorageAccountName -StorageAccountKey $defaultStorageAccountKey
+New-AzureStorageContainer -Name $defaultStorageContainerName -Context $destContext
+ 
+#HDI Cluster Credentials
+$clusterUserName = "admintime"
+$clusterPassword = ConvertTo-SecureString "Pa55w.rd" -AsPlainText -Force
+$credentials = New-Object System.Management.Automation.PSCredential($clusterUsername, $clusterPassword)
+
+
+$sshUserName = "sshadmin"
+$sshUnsecuredPassword = "Pa55w.rd"
+$sshPassword = ConvertTo-SecureString $sshUnsecuredPassword -AsPlainText -Force
+$sshCredentials = New-Object System.Management.Automation.PSCredential($sshUserName, $sshPassword)
+
+
+# The location of the HDInsight cluster must be in the same data center as the Storage account.
+$location = Get-AzureRmStorageAccount -ResourceGroupName $resourceGroupName -StorageAccountName $defaultStorageAccountName | %{$_.Location}
+
+Write-Host -ForegroundColor Green "We are now creating your HDInsight Cluster. Please continue on with your lesson as it is created."
+
+New-AzureRmHDInsightCluster `
+    -ClusterName $clusterName `
+    -ResourceGroupName $resourceGroupName `
+    -HttpCredential $credentials `
+    -Location $location `
+    -DefaultStorageAccountName "$defaultStorageAccountName.blob.core.windows.net" `
+    -DefaultStorageAccountKey $defaultStorageAccountKey `
+    -DefaultStorageContainer $defaultStorageContainerName  `
+    -ClusterSizeInNodes $clusterNodes `
+    -ClusterType Hadoop `
+    -OSType Linux `
+    -Version "3.6" `
+    -SshCredential $sshCredentials
+
+Write-Host -ForegroundColor Green "Congratulations! Your cluster has been created and is named $($clusterName). Press Enter when you are ready to run your first MapReduce job"
+
+$holder = Read-Host 
+
+Write-Host "Defining Word Count MapReduce Job" -ForegroundColor Green
+
+$wordCountJobDefinition = New-AzureRmHDInsightMapReduceJobDefinition `
+    -JarFile "/example/jars/hadoop-mapreduce-examples.jar" `
+    -ClassName "wordcount" `
+    -Arguments `
+        "/example/data/gutenberg/davinci.txt", `
+        "/example/data/WordCountOutput"
+
+Write-Host "Reading data from /example/data/gutenberg/davinci.tx" -ForegroundColor Green
+Write-Host "Writing output to /example/data/WordCountOutput" -ForegroundColor Green
+
+
+#Submit the job to the cluster
+Write-Host "Submitting MapReduce job..." -ForegroundColor Green
+$wordCountJob = Start-AzureRmHDInsightJob `
+    -ClusterName $clusterName `
+    -JobDefinition $wordCountJobDefinition `
+    -HttpCredential $credentials
+
+#Wait for the job to complete
+Write-Host "Job is running. Please wait for completion..." -ForegroundColor Green
+Wait-AzureRmHDInsightJob `
+    -ClusterName $clusterName `
+    -JobId $wordCountJob.JobId `
+    -HttpCredential $credentials
+
+# Download the output
+Get-AzureStorageBlobContent `
+    -Blob 'example/data/WordCountOutput/part-r-00000' `
+    -Container $defaultStorageContainerName `
+    -Destination WordCountOutput.txt `
+    -Context $destContext
+
+Write-Host -ForegroundColor Green "Downloaded output to WordCountOutput.txt. By Default to /WordCountOutput.txt"
+
+# Print the output of the job.
+$notNeeded = Get-AzureRmHDInsightJobOutput `
+    -Clustername $clusterName `
+    -JobId $wordCountJob.JobId `
+    -HttpCredential $credentials
+
+
+Get-Content WordCountOutput.txt -First 75
+
+Write-Host -ForegroundColor Green "Abbreviated output. Full output can be found in WordCountOutput.txt. Typically stored in C:/Users/<Username>/WordCountOutput.txt"
+Write-Host -ForegroundColor Green "Output shows the word and then the number of times it is found in the input file"
+Write-Host -ForegroundColor Green "Now go to section Run a Yarn Job to use HDInsight to solve a Sudoku puzzle!"
+Write-Host -ForegroundColor Cyan "Host Name: $($clusterName)-ssh.azurehdinsight.net"
+Write-Host -ForegroundColor Cyan "SSH User Name: $($sshUserName)"
+Write-Host -ForegroundColor Cyan "SSH Password: $($sshUnsecuredPassword)"
+Write-Host -ForegroundColor Cyan "Resource Group Name: $($resourceGroupName)"
+
+
+Write-Host -ForegroundColor yellow "Press enter to end this script."
+
+Read-Host
+
