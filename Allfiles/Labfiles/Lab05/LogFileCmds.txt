@@ -1,0 +1,15 @@
+pscp -pw Pa55w.rd123 -r sshuser@<clustername>-ssh.azurehdinsight.net:/var/log/hadoop/hdfs/* e:/Logfiles/hadoop/
+
+pscp -pw Pa55w.rd123 -r sshuser@<clustername>-ssh.azurehdinsight.net:/var/log/hdinsight-startupagent/* e:/Logfiles/hdinsight-startupagent/
+
+pscp -pw Pa55w.rd123 -r sshuser@<clustername>-ssh.azurehdinsight.net:/var/log/hdinsight-agent/* e:/Logfiles/hdinsight-agent/
+
+pscp -pw Pa55w.rd123 -r sshuser@<clustername>-ssh.azurehdinsight.net:/var/log/syslog e:/Logfiles/syslog/
+
+pscp -pw Pa55w.rd123 -r sshuser@<clustername>-ssh.azurehdinsight.net:/var/log/ambari-agent/* e:/Logfiles/ambari-agent/
+
+ssh:
+sudo cp /var/log/ambari-server/ambari-server.log /home/sshuser
+sudo chmod 775 /home/sshuser/ambari-server.log
+
+pscp -pw Pa55w.rd123 sshuser@<clustername>-ssh.azurehdinsight.net:/home/sshuser/ambari-server.log e:/Logfiles/ambari-server/ 

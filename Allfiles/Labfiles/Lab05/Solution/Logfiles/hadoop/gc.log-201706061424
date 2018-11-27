@@ -1,0 +1,12 @@
+OpenJDK 64-Bit Server VM (25.131-b11) for linux-amd64 JRE (1.8.0_131-8u131-b11-0ubuntu1.16.04.2-b11), built on May  6 2017 02:45:27 by "buildd" with gcc 5.4.0 20160609
+Memory: 4k page, physical 7134392k(4269288k free), swap 0k(0k free)
+CommandLine flags: -XX:ErrorFile=/var/log/hadoop/hdfs/hs_err_pid%p.log -XX:InitialHeapSize=1073741824 -XX:MaxHeapSize=1073741824 -XX:MaxNewSize=209715200 -XX:MaxTenuringThreshold=6 -XX:NewSize=209715200 -XX:OldPLABSize=16 -XX:ParallelGCThreads=8 -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:+UseParNewGC 
+2017-06-06T14:25:06.646+0000: 17.041: [GC (Allocation Failure) 2017-06-06T14:25:06.646+0000: 17.041: [ParNew: 163840K->20480K(184320K), 0.2702143 secs] 163840K->26114K(1028096K), 0.2703625 secs] [Times: user=0.22 sys=0.01, real=0.27 secs] 
+Heap
+ par new generation   total 184320K, used 100565K [0x00000000c0000000, 0x00000000cc800000, 0x00000000cc800000)
+  eden space 163840K,  48% used [0x00000000c0000000, 0x00000000c4e35760, 0x00000000ca000000)
+  from space 20480K, 100% used [0x00000000cb400000, 0x00000000cc800000, 0x00000000cc800000)
+  to   space 20480K,   0% used [0x00000000ca000000, 0x00000000ca000000, 0x00000000cb400000)
+ concurrent mark-sweep generation total 843776K, used 5634K [0x00000000cc800000, 0x0000000100000000, 0x0000000100000000)
+ Metaspace       used 20631K, capacity 20958K, committed 21120K, reserved 1069056K
+  class space    used 2311K, capacity 2429K, committed 2432K, reserved 1048576K

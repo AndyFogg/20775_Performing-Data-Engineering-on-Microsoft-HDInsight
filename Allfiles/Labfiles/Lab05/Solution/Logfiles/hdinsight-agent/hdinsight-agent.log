@@ -1,0 +1,22 @@
+2017-06-06 14:20:36,098 - HdinsightAgent.py [3197] __main__ - INFO - Starting Cluster agent ...
+2017-06-06 14:20:36,098 - HdinsightAgent.py [3197] __main__ - INFO - Cluster agent will be configured with /etc/hdinsight-agent/conf/hdinsight-agent.cfg. Content:
+[main]
+run_interval_secs:300
+
+[cluster manifest data]
+cluster_manifest_data_filename: /var/lib/hdinsight-agent/hdinsight-agent.dat
+
+[logging]
+output_file: /var/log/hdinsight-agent/hdinsight-agent.log
+
+
+2017-06-06 14:20:36,188 - HdinsightAgent.py [3197] __main__ - INFO - Cluster Agent starts running...
+2017-06-06 14:20:36,188 - HdinsightAgent.py [3197] __main__ - INFO - Getting manifest url from data file
+2017-06-06 14:20:36,188 - HdinsightAgent.py [3197] __main__ - INFO - Downloading manifest...
+2017-06-06 14:20:36,498 - HdinsightAgent.py [3197] __main__ - INFO - Checking current manifest version '/etc/hdinsight-agent/manifest.json'
+2017-06-06 14:20:36,499 - HdinsightAgent.py [3197] __main__ - INFO - No manifest found at '/etc/hdinsight-agent/manifest.json'
+2017-06-06 14:20:36,499 - HdinsightAgent.py [3197] __main__ - INFO - Updating Manifest... new version is 1, current version is -1. 
+2017-06-06 14:20:36,521 - HdinsightAgent.py [3197] __main__ - INFO - Executing startup script '/opt/startup_scripts/startup.py' ...
+
+2017-06-06 14:26:42,471 - HdinsightAgent.py [3197] __main__ - INFO - Successfully completed cluster configuration
+2017-06-06 14:26:42,472 - HdinsightAgent.py [3197] __main__ - INFO - Cluster Agent succeeds...

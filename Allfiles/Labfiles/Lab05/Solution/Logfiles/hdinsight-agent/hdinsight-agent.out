@@ -1,0 +1,266 @@
+2017-06-06 14:20:36,098 - HdinsightAgent.py [3197] __main__ - INFO - Starting Cluster agent ...
+2017-06-06 14:20:36,098 - HdinsightAgent.py [3197] __main__ - INFO - Cluster agent will be configured with /etc/hdinsight-agent/conf/hdinsight-agent.cfg. Content:
+[main]
+run_interval_secs:300
+
+[cluster manifest data]
+cluster_manifest_data_filename: /var/lib/hdinsight-agent/hdinsight-agent.dat
+
+[logging]
+output_file: /var/log/hdinsight-agent/hdinsight-agent.log
+
+
+2017-06-06 14:20:36,188 - HdinsightAgent.py [3197] __main__ - INFO - Cluster Agent starts running...
+2017-06-06 14:20:36,188 - HdinsightAgent.py [3197] __main__ - INFO - Getting manifest url from data file
+2017-06-06 14:20:36,188 - HdinsightAgent.py [3197] __main__ - INFO - Downloading manifest...
+Verification successful
+2017-06-06 14:20:36,498 - HdinsightAgent.py [3197] __main__ - INFO - Checking current manifest version '/etc/hdinsight-agent/manifest.json'
+2017-06-06 14:20:36,499 - HdinsightAgent.py [3197] __main__ - INFO - No manifest found at '/etc/hdinsight-agent/manifest.json'
+2017-06-06 14:20:36,499 - HdinsightAgent.py [3197] __main__ - INFO - Updating Manifest... new version is 1, current version is -1. 
+2017-06-06 14:20:36,521 - HdinsightAgent.py [3197] __main__ - INFO - Executing startup script '/opt/startup_scripts/startup.py' ...
+
+Verification successful
+2017-06-06 14:20:37,160 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/startup_mdsd.py
+2017-06-06 14:20:37,283 - startup_mdsd.py [3250] __main__ - INFO - startup_mdsd: Start configuration for mdsd...
+2017-06-06 14:20:37,324 - startup_mdsd.py [3250] __main__ - INFO - loading mdsd from /etc/mdsd.d/mdsd.xml
+2017-06-06 14:20:37,336 - startup_mdsd.py [3250] __main__ - INFO - Updated IdentityComponent attribute 'Tenant' to '04ab5e3a5e72486dbce3ac883431219e'
+2017-06-06 14:20:37,336 - startup_mdsd.py [3250] __main__ - INFO - Updated IdentityComponent attribute 'Role' to 'headnode'
+2017-06-06 14:20:37,337 - startup_mdsd.py [3250] __main__ - INFO - Updated IdentityComponent attribute 'ClusterDnsName' to 'davidmod05cluster'
+2017-06-06 14:20:37,339 - startup_mdsd.py [3250] __main__ - INFO - Updated IdentityComponent attribute 'Host' to 'hn0-davidm.mnk4wf22sbuexipuv5knp4cv4e.ax.internal.cloudapp.net'
+2017-06-06 14:20:37,339 - startup_mdsd.py [3250] __main__ - INFO - Updated IdentityComponent attribute 'MALoggingHash' to ''
+2017-06-06 14:20:37,352 - startup_mdsd.py [3250] __main__ - INFO - mdsd.xml has been updated (/etc/mdsd.d/mdsd.xml)
+2017-06-06 14:20:37,352 - startup_mdsd.py [3250] __main__ - INFO - autokey not configured at startup, will configure now
+2017-06-06 14:20:37,352 - startup_mdsd.py [3250] __main__ - INFO - loading mdsautokey.cfg from /etc/mdsd.d/mdsautokey.cfg
+2017-06-06 14:20:37,353 - startup_mdsd.py [3250] __main__ - INFO - mdsautokey.cfg has been updated (/etc/mdsd.d/mdsautokey.cfg)
+2017-06-06 14:20:37,353 - startup_mdsd.py [3250] __main__ - INFO - calling 'sudo ldconfig /opt/microsoft/omi/lib'
+2017-06-06 14:20:38,371 - utilities.py [3250] hdinsight_common.utilities - INFO - restarting 'mdsd': ['sudo', 'service', 'mdsd', 'restart']
+2017-06-06 14:20:38,568 - utilities.py [3250] hdinsight_common.utilities - INFO - Exit code = 0.
+ stdout=
+ stderr=
+2017-06-06 14:20:38,584 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/startup_mdsd.py, exit code: 0
+2017-06-06 14:20:38,585 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/startup_mdsd.py: Verification successful
+
+2017-06-06 14:20:38,585 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/configure_user_password_expiration.py
+2017-06-06 14:20:38,743 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/configure_user_password_expiration.py, exit code: 0
+2017-06-06 14:20:38,744 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/configure_user_password_expiration.py: Verification successful
+
+2017-06-06 14:20:38,744 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/configure_swap_file.py
+2017-06-06 14:20:38,835 - configure_swap_file.py [3401] __main__ - INFO - Checking if the resource partition is mounted
+2017-06-06 14:20:38,836 - configure_swap_file.py [3401] __main__ - INFO - Resource partition is already mounted
+2017-06-06 14:20:38,847 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/configure_swap_file.py, exit code: 0
+2017-06-06 14:20:38,848 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/configure_swap_file.py: 
+2017-06-06 14:20:38,848 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (soft-failure): /opt/startup_scripts/log_machine_info.py
+2017-06-06 14:20:38,945 - log_machine_info.py [3411] __main__ - INFO - Running steps to verify sanity of VM
+2017-06-06 14:20:38,945 - log_machine_info.py [3411] __main__ - INFO - Running step 'verify_fqdn_works'
+2017-06-06 14:20:38,949 - log_machine_info.py [3411] __main__ - INFO - hostname: 'hn0-davidm.mnk4wf22sbuexipuv5knp4cv4e.ax.internal.cloudapp.net'
+2017-06-06 14:20:38,949 - log_machine_info.py [3411] __main__ - INFO - Running step 'verify_etc_host'
+2017-06-06 14:20:38,950 - log_machine_info.py [3411] __main__ - INFO - Step 'verify_etc_host' for '/etc/hosts' has contents: 127.0.0.1 localhost#012#012# The following lines are desirable for IPv6 capable hosts#012::1 ip6-localhost ip6-loopback#012fe00::0 ip6-localnet#012ff00::0 ip6-mcastprefix#012ff02::1 ip6-allnodes#012ff02::2 ip6-allrouters#012ff02::3 ip6-allhosts#012
+2017-06-06 14:20:38,950 - log_machine_info.py [3411] __main__ - INFO - Running step 'verify_etc_resolv_conf'
+2017-06-06 14:20:38,950 - log_machine_info.py [3411] __main__ - INFO - Step 'verify_etc_resolv_conf' for '/etc/resolv.conf' has contents: # Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8)#012#     DO NOT EDIT THIS FILE BY HAND -- YOUR CHANGES WILL BE OVERWRITTEN#012options timeout:1 attempts:5#012nameserver 168.63.129.16#012search mnk4wf22sbuexipuv5knp4cv4e.ax.internal.cloudapp.net#012
+2017-06-06 14:20:38,962 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/log_machine_info.py, exit code: 0
+2017-06-06 14:20:38,963 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/upload_headnode_fqdn.py
+2017-06-06 14:20:39,138 - upload_headnode_fqdn.py [3418] __main__ - INFO - Role environment exists. Skip uploading headnode fqdn 
+2017-06-06 14:20:39,155 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/upload_headnode_fqdn.py, exit code: 0
+2017-06-06 14:20:39,155 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/upload_headnode_fqdn.py: 
+2017-06-06 14:20:39,156 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/upload_zookeeper_fqdn.py
+2017-06-06 14:20:39,261 - upload_zookeeper_fqdn.py [3425] __main__ - INFO - Role environment exists. Skip uploading zookeeper fqdn 
+2017-06-06 14:20:39,275 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/upload_zookeeper_fqdn.py, exit code: 0
+2017-06-06 14:20:39,275 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/upload_zookeeper_fqdn.py: 
+2017-06-06 14:20:39,275 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/add_ambari_admin_as_local_user.py
+2017-06-06 14:20:39,401 - add_ambari_admin_as_local_user.py [3430] __main__ - INFO - Trying to add Ambari admin user as local user...
+2017-06-06 14:20:41,275 - add_ambari_admin_as_local_user.py [3430] __main__ - INFO - Successfully added hdinsightwatchdog as local user
+2017-06-06 14:20:42,211 - add_ambari_admin_as_local_user.py [3430] __main__ - INFO - Successfully added hadmin as local user
+2017-06-06 14:20:42,223 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/add_ambari_admin_as_local_user.py, exit code: 0
+2017-06-06 14:20:42,224 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/add_ambari_admin_as_local_user.py: Verification successful
+sent invalidate(passwd) request, exiting
+sent invalidate(group) request, exiting
+sent invalidate(passwd) request, exiting
+sent invalidate(group) request, exiting
+sent invalidate(passwd) request, exiting
+sent invalidate(group) request, exiting
+sent invalidate(passwd) request, exiting
+sent invalidate(group) request, exiting
+
+2017-06-06 14:20:42,224 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/configure_ambari_server.py
+2017-06-06 14:20:42,467 - configure_ambari_server.py [3535] __main__ - INFO - configure_ambari_server: Checking cluster manifest for ambari-server config...
+2017-06-06 14:20:43,503 - configure_ambari_server.py [3535] __main__ - INFO - 'start_ambari_server' is set to 1, configuring ambari-server...
+2017-06-06 14:20:43,503 - configure_ambari_server.py [3535] __main__ - INFO - Adding appenders to ambari-server log4j.properties...
+2017-06-06 14:20:43,567 - configure_ambari_server.py [3535] __main__ - INFO - Successfully added appenders to ambari-server log4j.properties (/etc/ambari-server/conf/log4j.properties).
+2017-06-06 14:20:43,568 - configure_ambari_server.py [3535] __main__ - INFO - applied ambari properties override
+2017-06-06 14:20:43,607 - FqdnRetriever.py [3535] hdinsight_common.FqdnRetriever - INFO - Retrieving fqdn for 2 VMs in 'headnode' host group. 
+2017-06-06 14:20:43,608 - FqdnRetriever.py [3535] hdinsight_common.FqdnRetriever - INFO - Retrieving 'headnode' fqdn list from role environment
+2017-06-06 14:20:43,610 - FqdnRetriever.py [3535] hdinsight_common.FqdnRetriever - INFO - Successfully retrieved fqdn for 2 VMs in 'headnode' host group. 
+2017-06-06 14:20:43,611 - configure_ambari_server.py [3535] __main__ - INFO - Lowest Headnode is: hn0-davidm.mnk4wf22sbuexipuv5knp4cv4e.ax.internal.cloudapp.net
+2017-06-06 14:20:43,611 - configure_ambari_server.py [3535] __main__ - INFO - Set up ambari-server to use sql azure db.
+2017-06-06 14:20:43,611 - configure_ambari_server.py [3535] __main__ - INFO - Installing jdbc jar...
+2017-06-06 14:20:43,611 - configure_ambari_server.py [3535] __main__ - INFO - Running command: sudo cp /usr/share/java/sqljdbc_4.1/enu/sqljdbc41.jar /usr/share/java/sqljdbc41.jar
+2017-06-06 14:20:43,772 - configure_ambari_server.py [3535] __main__ - INFO - Running command: sudo chmod 644 /usr/share/java/sqljdbc41.jar
+2017-06-06 14:20:43,784 - configure_ambari_server.py [3535] __main__ - INFO - Setting ambari-server db properties...
+2017-06-06 14:20:43,826 - configure_ambari_server.py [3535] __main__ - INFO - Ambari server version is 2.4.0.4-141
+2017-06-06 14:20:43,827 - configure_ambari_server.py [3535] __main__ - INFO - Running command: sudo ambari-server setup --database mssql --databasehost mf9b76c6lq.database.windows.net --databasename  v3504ab5e3a5e72486dbce3ac883431219eAmbariDb --databaseport 1433 --databaseusername v3504ab5e3a5e72486dbce3ac883431219eAmbariDbLogin@mf9b76c6lq.database.windows.net --databasepassword **HIDDEN** --silent --skip-view-extraction
+2017-06-06 14:20:50,072 - configure_ambari_server.py [3535] __main__ - INFO - Adding security flags to jdbc connection string
+2017-06-06 14:20:50,074 - configure_ambari_server.py [3535] __main__ - INFO - Added security flags to jdbc connection string
+2017-06-06 14:20:50,093 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/configure_ambari_server.py, exit code: 0
+2017-06-06 14:20:50,094 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/configure_ambari_server.py: Verification successful
+Verification successful
+
+2017-06-06 14:20:50,094 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/copy_wasb_encryption_cert.py
+2017-06-06 14:20:50,233 - copy_wasb_encryption_cert.py [3771] __main__ - INFO - Key Decryption cert copied from /var/lib/waagent/CB07F12A5043ECA29CA5BCB0DADCABC8A5F80316.prv to /usr/lib/hdinsight-common/certs/key_decryption_cert.prv
+2017-06-06 14:20:50,245 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/copy_wasb_encryption_cert.py, exit code: 0
+2017-06-06 14:20:50,245 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/copy_wasb_encryption_cert.py: Verification successful
+
+2017-06-06 14:20:50,245 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/verify_os_patching_succeeded.py
+2017-06-06 14:20:50,378 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/verify_os_patching_succeeded.py, exit code: 0
+2017-06-06 14:20:50,378 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/verify_os_patching_succeeded.py: Verification successful
+
+2017-06-06 14:20:50,378 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/configure_ambari_agent.py
+2017-06-06 14:20:50,482 - configure_ambari_agent.py [3813] __main__ - INFO - configure_ambari_agent: Checking cluster manifest for config...
+2017-06-06 14:20:50,517 - configure_ambari_agent.py [3813] __main__ - INFO - Configuring ambari-agent...
+2017-06-06 14:20:50,519 - configure_ambari_agent.py [3813] __main__ - INFO - Ambari-HA is enabled. Slave failover controller updates the hostname
+2017-06-06 14:20:50,519 - configure_ambari_agent.py [3813] __main__ - INFO - Enabling logging_executes under section logging in ambari-agent.ini
+2017-06-06 14:20:50,519 - configure_ambari_agent.py [3813] __main__ - INFO - Not disabling ambari parallel_execution in ambari agent configuration (enabled by default).
+2017-06-06 14:20:50,533 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/configure_ambari_agent.py, exit code: 0
+2017-06-06 14:20:50,533 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/configure_ambari_agent.py: Verification successful
+
+2017-06-06 14:20:50,533 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/generic_ambari_config_handler.py
+2017-06-06 14:20:50,637 - generic_ambari_config_handler.py [3832] __main__ - INFO - ambari_agent_config_handler: Checking cluster manifest for configs to be handled for ambari-agent...
+2017-06-06 14:20:50,673 - generic_config_handler.py [3832] generic_config_handler - INFO - Configuring ini settings for /etc/ambari-agent/conf/ambari-agent.ini
+2017-06-06 14:20:50,680 - generic_config_handler.py [3832] generic_config_handler - INFO - Added the configuration multiprocess_status_commands_executor_enabled under section agent with value 1
+2017-06-06 14:20:50,681 - generic_config_handler.py [3832] generic_config_handler - INFO - Added the configuration log_command_executes under section logging with value 1
+2017-06-06 14:20:50,681 - generic_config_handler.py [3832] generic_config_handler - INFO - Added the configuration log_out_files under section logging with value 1
+2017-06-06 14:20:50,681 - generic_config_handler.py [3832] generic_config_handler - INFO - Added the configuration connect_retry_delay under section server with value 5
+2017-06-06 14:20:50,682 - generic_config_handler.py [3832] generic_config_handler - INFO - Added the configuration max_reconnect_retry_delay under section server with value 10
+2017-06-06 14:20:50,695 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/generic_ambari_config_handler.py, exit code: 0
+2017-06-06 14:20:50,696 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/generic_ambari_config_handler.py: Verification successful
+
+2017-06-06 14:20:50,696 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/copy_zeppelin_notebooks.py
+2017-06-06 14:20:50,816 - copy_zeppelin_notebooks.py [3854] __main__ - INFO - Lookup existence for file /etc/hdinsight-zeppelin/hadoop/hadoop.txt
+2017-06-06 14:20:50,890 - copy_zeppelin_notebooks.py [3854] __main__ - INFO - Skipping zeppelin notebook set-up as mapping file /etc/hdinsight-zeppelin/hadoop/hadoop.txt not exists 
+2017-06-06 14:20:50,902 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/copy_zeppelin_notebooks.py, exit code: 0
+2017-06-06 14:20:50,902 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/copy_zeppelin_notebooks.py: Verification successful
+
+2017-06-06 14:20:50,903 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/vm_tune_hive.py
+2017-06-06 14:20:51,026 - vm_tune_hive.py [3873] __main__ - INFO - Found cluster type is hadoop
+2017-06-06 14:20:51,040 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/vm_tune_hive.py, exit code: 0
+2017-06-06 14:20:51,041 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/vm_tune_hive.py: Verification successful
+
+2017-06-06 14:20:51,041 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/startup_hdinsight_zookeeper.py
+2017-06-06 14:20:51,208 - startup_hdinsight_zookeeper.py [3892] __main__ - INFO - startup_hdinsight_zookeeper: Checking cluster manifest for config...
+2017-06-06 14:20:51,245 - startup_hdinsight_zookeeper.py [3892] __main__ - INFO - start_hdinsight_zk_server is set to 0, skip hdinsight-zookeeper startup...
+2017-06-06 14:20:51,265 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/startup_hdinsight_zookeeper.py, exit code: 0
+2017-06-06 14:20:51,266 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/startup_hdinsight_zookeeper.py: Verification successful
+
+2017-06-06 14:20:51,266 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/configure_failover_controller.py
+2017-06-06 14:20:51,449 - configure_failover_controller.py [3913] __main__ - INFO - Configuring failover controller...
+2017-06-06 14:20:51,522 - cluster_utilities.py [3913] hdinsight_common.cluster_utilities - INFO - Retrieving zk hostnames...
+2017-06-06 14:20:51,525 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - INFO - Retrieving fqdn for 3 VMs in 'zookeepernode' host group. 
+2017-06-06 14:20:51,525 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - INFO - Retrieving 'zookeepernode' fqdn list from role environment
+2017-06-06 14:20:51,525 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 120
+2017-06-06 14:20:56,530 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 119
+2017-06-06 14:21:01,535 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 118
+2017-06-06 14:21:06,541 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 117
+2017-06-06 14:21:11,546 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 116
+2017-06-06 14:21:16,551 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 115
+2017-06-06 14:21:21,556 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 114
+2017-06-06 14:21:26,562 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 113
+2017-06-06 14:21:31,567 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 112
+2017-06-06 14:21:36,568 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 111
+2017-06-06 14:21:41,573 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 110
+2017-06-06 14:21:46,576 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 109
+2017-06-06 14:21:51,582 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 108
+2017-06-06 14:21:56,583 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 107
+2017-06-06 14:22:01,588 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - WARNING - Only 0 VMs are ready in host group zookeepernode, expecting 3. Retrying in 5 secs. remaining retries: 106
+2017-06-06 14:22:06,593 - FqdnRetriever.py [3913] hdinsight_common.FqdnRetriever - INFO - Successfully retrieved fqdn for 3 VMs in 'zookeepernode' host group. 
+2017-06-06 14:22:06,594 - cluster_utilities.py [3913] hdinsight_common.cluster_utilities - INFO - zookeeper host names: [u'zk4-davidm.mnk4wf22sbuexipuv5knp4cv4e.ax.internal.cloudapp.net', u'zk5-davidm.mnk4wf22sbuexipuv5knp4cv4e.ax.internal.cloudapp.net', u'zk6-davidm.mnk4wf22sbuexipuv5knp4cv4e.ax.internal.cloudapp.net']
+2017-06-06 14:22:06,595 - configure_failover_controller.py [3913] __main__ - INFO - loading fc-site.xml from /etc/failover-controller/conf/fc-site.xml
+2017-06-06 14:22:06,725 - configure_failover_controller.py [3913] __main__ - INFO - set config 'ha.zookeeper.quorum' to 'zk4-davidm.mnk4wf22sbuexipuv5knp4cv4e.ax.internal.cloudapp.net:2182,zk5-davidm.mnk4wf22sbuexipuv5knp4cv4e.ax.internal.cloudapp.net:2182,zk6-davidm.mnk4wf22sbuexipuv5knp4cv4e.ax.internal.cloudapp.net:2182'
+2017-06-06 14:22:06,778 - configure_failover_controller.py [3913] __main__ - INFO - fc-site.xml has been updated (/etc/failover-controller/conf/fc-site.xml)
+2017-06-06 14:22:06,798 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/configure_failover_controller.py, exit code: 0
+2017-06-06 14:22:06,798 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/configure_failover_controller.py: Verification successful
+Verification successful
+
+2017-06-06 14:22:06,799 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/configure_ha_service.py
+2017-06-06 14:22:06,931 - configure_ha_service.py [4095] __main__ - INFO - Updating ha service configuration xml from /etc/failover-controller/conf/ha-service-site.xml
+2017-06-06 14:22:06,935 - configure_ha_service.py [4095] __main__ - INFO - Updating fc-site configuration xml from /etc/failover-controller/conf/fc-site.xml
+2017-06-06 14:22:06,952 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/configure_ha_service.py, exit code: 0
+2017-06-06 14:22:06,952 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/configure_ha_service.py: Verification successful
+
+2017-06-06 14:22:06,952 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/startup_master_failover_controller.py
+2017-06-06 14:22:07,040 - startup_master_failover_controller.py [4114] __main__ - INFO - startup_master_failover_controller: Checking cluster manifest for config...
+2017-06-06 14:22:07,084 - startup_master_failover_controller.py [4114] __main__ - INFO - 'start_ambari_server' is set to 1, starting master failover controller...
+2017-06-06 14:22:07,085 - utilities.py [4114] hdinsight_common.utilities - INFO - starting 'master-failover-controller': ['sudo', 'service', 'master-failover-controller', 'start']
+2017-06-06 14:22:07,352 - utilities.py [4114] hdinsight_common.utilities - INFO - Exit code = 0.
+ stdout=
+ stderr=
+2017-06-06 14:22:07,368 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/startup_master_failover_controller.py, exit code: 0
+2017-06-06 14:22:07,368 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/startup_master_failover_controller.py: Verification successful
+
+2017-06-06 14:22:07,368 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/startup_slave_failover_controller.py
+2017-06-06 14:22:07,460 - startup_slave_failover_controller.py [4169] __main__ - INFO - startup_slave_failover_controller: Checking cluster manifest for config...
+2017-06-06 14:22:07,496 - startup_slave_failover_controller.py [4169] __main__ - INFO - Starting slave failover controller...
+2017-06-06 14:22:07,497 - utilities.py [4169] hdinsight_common.utilities - INFO - starting 'slave-failover-controller': ['sudo', 'service', 'slave-failover-controller', 'start']
+2017-06-06 14:22:07,726 - utilities.py [4169] hdinsight_common.utilities - INFO - Exit code = 0.
+ stdout=
+ stderr=
+2017-06-06 14:22:07,740 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/startup_slave_failover_controller.py, exit code: 0
+2017-06-06 14:22:07,741 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/startup_slave_failover_controller.py: Verification successful
+
+2017-06-06 14:22:07,741 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/startup_probesservice.py
+2017-06-06 14:22:07,830 - startup_probesservice.py [4239] __main__ - INFO - Checking cluster manifest for config...
+2017-06-06 14:22:07,869 - startup_probesservice.py [4239] __main__ - INFO - Unable to find enable_hdinsight_probes setting, starting ProbesService by default.
+2017-06-06 14:22:07,869 - utilities.py [4239] hdinsight_common.utilities - INFO - starting 'hdinsight-probes': ['sudo', 'service', 'hdinsight-probes', 'start']
+2017-06-06 14:22:08,130 - utilities.py [4239] hdinsight_common.utilities - INFO - Exit code = 0.
+ stdout=
+ stderr=
+2017-06-06 14:22:08,144 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/startup_probesservice.py, exit code: 0
+2017-06-06 14:22:08,144 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/startup_probesservice.py: Verification successful
+
+2017-06-06 14:22:08,144 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (hard-failure): /opt/startup_scripts/startup_patchingagent.py
+2017-06-06 14:22:08,232 - startup_patchingagent.py [4301] __main__ - INFO - startup_patchingagent
+2017-06-06 14:22:08,233 - utilities.py [4301] hdinsight_common.utilities - INFO - starting 'hdinsight-patchingagent': ['sudo', 'service', 'hdinsight-patchingagent', 'start']
+2017-06-06 14:22:08,463 - utilities.py [4301] hdinsight_common.utilities - INFO - Exit code = 0.
+ stdout=
+ stderr=
+2017-06-06 14:22:08,475 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/startup_patchingagent.py, exit code: 0
+2017-06-06 14:22:08,475 - utilities.py [3228] hdinsight_common.utilities - INFO - Stderr from script /opt/startup_scripts/startup_patchingagent.py: 
+2017-06-06 14:22:08,476 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (soft-failure): /opt/startup_scripts/configure_managed_patching_reboot.py
+2017-06-06 14:22:08,694 - configure_managed_patching_reboot.py [4336] __main__ - INFO - Enabling managed patching reboot.
+2017-06-06 14:22:08,724 - configure_managed_patching_reboot.py [4336] __main__ - INFO - Successfully enabled managed patching reboot.
+2017-06-06 14:22:08,738 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/configure_managed_patching_reboot.py, exit code: 0
+2017-06-06 14:22:08,739 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (soft-failure): /opt/startup_scripts/download_motd.py
+Verification successful
+2017-06-06 14:22:08,971 - download_motd.py [4345] __main__ - INFO - Downloading https://raw.githubusercontent.com/hdinsight/motd/master/hadoop.txt to /etc/hdinsight-motd/motd.txt
+2017-06-06 14:22:08,992 - download_motd.py [4345] __main__ - INFO - Successfully downloaded MOTD.
+2017-06-06 14:22:09,008 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/download_motd.py, exit code: 0
+2017-06-06 14:22:09,009 - utilities.py [3228] hdinsight_common.utilities - INFO - Calling script (soft-failure): /opt/startup_scripts/configure_zeppelindependencies.py
+2017-06-06 14:22:09,108 - configure_zeppelindependencies.py [4365] __main__ - INFO - Waiting for cluster setup to be complete ...
+2017-06-06 14:22:09,109 - utilities.py [4365] hdinsight_common.utilities - INFO - Calling script (soft-failure): /opt/startup_scripts/wait_for_cluster_setup.py
+Verification successful
+2017-06-06 14:22:10,145 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - <urlopen error [Errno -2] Name or service not known>, retrying in 1 seconds...
+2017-06-06 14:22:11,151 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - <urlopen error [Errno -2] Name or service not known>, retrying in 2 seconds...
+2017-06-06 14:22:13,159 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - <urlopen error [Errno -2] Name or service not known>, retrying in 1 seconds...
+2017-06-06 14:22:14,168 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - <urlopen error [Errno -2] Name or service not known>, retrying in 1 seconds...
+2017-06-06 14:22:15,175 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - <urlopen error [Errno -2] Name or service not known>, retrying in 2 seconds...
+2017-06-06 14:22:17,184 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - <urlopen error [Errno -2] Name or service not known>, retrying in 2 seconds...
+2017-06-06 14:22:19,192 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - <urlopen error [Errno -2] Name or service not known>, retrying in 1 seconds...
+2017-06-06 14:22:20,219 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - <urlopen error [Errno -2] Name or service not known>, retrying in 2 seconds...
+2017-06-06 14:22:22,224 - wait_for_cluster_setup.py [4370] __main__ - WARNING - An exception was encountered while querying Ambari for cluster setup request: '<urlopen error [Errno 111] Connection refused>'
+2017-06-06 14:22:52,260 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - <urlopen error [Errno 111] Connection refused>, retrying in 1 seconds...
+2017-06-06 14:22:53,262 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - <urlopen error [Errno 111] Connection refused>, retrying in 2 seconds...
+2017-06-06 14:22:55,265 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - <urlopen error [Errno 111] Connection refused>, retrying in 1 seconds...
+2017-06-06 14:22:56,268 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - <urlopen error [Errno 111] Connection refused>, retrying in 1 seconds...
+2017-06-06 14:22:57,270 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - <urlopen error [Errno 111] Connection refused>, retrying in 2 seconds...
+2017-06-06 14:22:59,273 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - <urlopen error [Errno 111] Connection refused>, retrying in 2 seconds...
+2017-06-06 14:23:03,385 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - HTTP Error 404: Not Found, retrying in 1 seconds...
+2017-06-06 14:23:04,885 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - HTTP Error 404: Not Found, retrying in 2 seconds...
+2017-06-06 14:23:06,959 - wait_for_cluster_setup.py [4370] __main__ - WARNING - An exception was encountered while querying Ambari for cluster setup request: 'HTTP Error 404: Not Found'
+2017-06-06 14:23:36,992 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - HTTP Error 404: Not Found, retrying in 1 seconds...
+2017-06-06 14:23:38,009 - api.py [4370] hdinsight_common.AmbariHelper - WARNING - HTTP Error 404: Not Found, retrying in 2 seconds...
+2017-06-06 14:26:41,735 - wait_for_cluster_setup.py [4370] __main__ - INFO - Cluster setup complete!
+2017-06-06 14:26:41,799 - utilities.py [4365] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/wait_for_cluster_setup.py, exit code: 0
+Verification successful
+2017-06-06 14:26:42,322 - patchzeppelindependencies.py [11808] __main__ - INFO - Found cluster type is hadoop
+2017-06-06 14:26:42,323 - patchzeppelindependencies.py [11808] __main__ - INFO - Skipping zeppelin patching for non interactivehivecluster
+2017-06-06 14:26:42,437 - utilities.py [3228] hdinsight_common.utilities - INFO - Script: /opt/startup_scripts/configure_zeppelindependencies.py, exit code: 0
+2017-06-06 14:26:42,471 - HdinsightAgent.py [3197] __main__ - INFO - Successfully completed cluster configuration
+2017-06-06 14:26:42,472 - HdinsightAgent.py [3197] __main__ - INFO - Cluster Agent succeeds...

@@ -1,0 +1,1066 @@
+Container: container_1496759089610_0002_01_000002 on 10.0.0.4_30050_1496761198964
+=================================================================================
+LogType:directory.info
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:15514
+Log Contents:
+ls -l:
+total 36
+-rw-r--r-- 1 yarn hadoop  129 Jun  6 14:59 container_tokens
+-rwx------ 1 yarn hadoop  679 Jun  6 14:59 default_container_executor_session.sh
+-rwx------ 1 yarn hadoop  733 Jun  6 14:59 default_container_executor.sh
+lrwxrwxrwx 1 yarn hadoop  109 Jun  6 14:59 job.jar -> /mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/filecache/10/job.jar
+lrwxrwxrwx 1 yarn hadoop  109 Jun  6 14:59 job.xml -> /mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/filecache/11/job.xml
+-rwx------ 1 yarn hadoop 5730 Jun  6 14:59 launch_container.sh
+lrwxrwxrwx 1 yarn hadoop   61 Jun  6 14:59 mr-framework -> /mnt/resource/hadoop/yarn/local/filecache/11/mapreduce.tar.gz
+drwx--x--- 2 yarn hadoop 4096 Jun  6 14:59 tmp
+find -L . -maxdepth 5 -ls:
+  7996672      4 drwx--x---   3 yarn     hadoop       4096 Jun  6 14:59 .
+  7995629      4 drwx------   2 yarn     hadoop       4096 Jun  6 14:59 ./job.jar
+  7995627    268 -r-x------   1 yarn     hadoop     273454 Jun  6 14:59 ./job.jar/job.jar
+  7995634      4 drwxr-xr-x   3 yarn     hadoop       4096 Jun  6 14:59 ./mr-framework
+  7995635      4 drwxr-xr-x   9 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop
+  7996606      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/bin
+  7996614      4 -r-xr-xr-x   1 yarn     hadoop        888 Apr  4 11:09 ./mr-framework/hadoop/bin/kill-secondary-name-node
+  7996612      4 -r-xr-xr-x   1 yarn     hadoop       1857 Apr  4 11:09 ./mr-framework/hadoop/bin/rcc
+  7996616     16 -r-xr-xr-x   1 yarn     hadoop      12707 Apr  4 11:09 ./mr-framework/hadoop/bin/hdfs
+  7996615     12 -r-xr-xr-x   1 yarn     hadoop       8786 Apr  4 11:09 ./mr-framework/hadoop/bin/hadoop.cmd
+  7996609     12 -r-xr-xr-x   1 yarn     hadoop      12069 Apr  4 11:09 ./mr-framework/hadoop/bin/yarn.cmd
+  7996618     12 -r-xr-xr-x   1 yarn     hadoop       8782 Apr  4 11:09 ./mr-framework/hadoop/bin/hdfs.cmd
+  7996613      4 -r-xr-xr-x   1 yarn     hadoop        830 Apr  4 11:09 ./mr-framework/hadoop/bin/kill-name-node
+  7996619      8 -r-xr-xr-x   1 yarn     hadoop       7465 Apr  4 11:09 ./mr-framework/hadoop/bin/mapred.cmd
+  7996607      8 -r-xr-xr-x   1 yarn     hadoop       6448 Apr  4 11:09 ./mr-framework/hadoop/bin/mapred
+  7996610    196 -r-xr-xr-x   1 yarn     hadoop     196636 Apr  4 11:09 ./mr-framework/hadoop/bin/test-container-executor
+  7996617    164 -r-xr-xr-x   1 yarn     hadoop     166732 Apr  4 11:09 ./mr-framework/hadoop/bin/container-executor
+  7996608     16 -r-xr-xr-x   1 yarn     hadoop      14958 Apr  4 11:09 ./mr-framework/hadoop/bin/yarn
+  7996611      8 -r-xr-xr-x   1 yarn     hadoop       7120 Apr  4 11:09 ./mr-framework/hadoop/bin/hadoop
+  7996637      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/etc
+  7996638      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop
+  7996656      8 -r-xr-xr-x   1 yarn     hadoop       4113 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/mapred-queues.xml.template
+  7996666      4 -r-xr-xr-x   1 yarn     hadoop       2598 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-metrics2.properties
+  7996667      4 -r-xr-xr-x   1 yarn     hadoop         21 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/httpfs-signature.secret
+  7996659      4 -r-xr-xr-x   1 yarn     hadoop       2250 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/yarn-env.cmd
+  7996646      4 -r-xr-xr-x   1 yarn     hadoop         10 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/slaves
+  7996644      4 -r-xr-xr-x   1 yarn     hadoop        318 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/container-executor.cfg
+  7996664      4 -r-xr-xr-x   1 yarn     hadoop        690 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/yarn-site.xml
+  7996662      4 -r-xr-xr-x   1 yarn     hadoop        775 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hdfs-site.xml
+  7996640      4 -r-xr-xr-x   1 yarn     hadoop        758 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/mapred-site.xml.template
+  7996663      4 -r-xr-xr-x   1 yarn     hadoop        774 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/core-site.xml
+  7996642      8 -r-xr-xr-x   1 yarn     hadoop       4567 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/yarn-env.sh
+  7996639      4 -r-xr-xr-x   1 yarn     hadoop       2316 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/ssl-client.xml.example
+  7996658      4 -r-xr-xr-x   1 yarn     hadoop       2490 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-metrics.properties
+  7996645      8 -r-xr-xr-x   1 yarn     hadoop       5511 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/kms-site.xml
+  7996657      4 -r-xr-xr-x   1 yarn     hadoop       3518 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/kms-acls.xml
+  7996650      4 -r-xr-xr-x   1 yarn     hadoop       2697 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/ssl-server.xml.example
+  7996655      4 -r-xr-xr-x   1 yarn     hadoop       3979 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-env.cmd
+  7996653      4 -r-xr-xr-x   1 yarn     hadoop       1383 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/mapred-env.sh
+  7996641      8 -r-xr-xr-x   1 yarn     hadoop       4436 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/capacity-scheduler.xml
+  7996651     16 -r-xr-xr-x   1 yarn     hadoop      12302 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/log4j.properties
+  7996652      4 -r-xr-xr-x   1 yarn     hadoop        620 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/httpfs-site.xml
+  7996643      4 -r-xr-xr-x   1 yarn     hadoop       1449 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/httpfs-env.sh
+  7996649      4 -r-xr-xr-x   1 yarn     hadoop       1335 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/configuration.xsl
+  7996660      4 -r-xr-xr-x   1 yarn     hadoop       1657 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/httpfs-log4j.properties
+  7996647      4 -r-xr-xr-x   1 yarn     hadoop       1631 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/kms-log4j.properties
+  7996654      8 -r-xr-xr-x   1 yarn     hadoop       4529 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-env.sh
+  7996665      4 -r-xr-xr-x   1 yarn     hadoop       1527 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/kms-env.sh
+  7996661      4 -r-xr-xr-x   1 yarn     hadoop        951 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/mapred-env.cmd
+  7996648     12 -r-xr-xr-x   1 yarn     hadoop       9683 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-policy.xml
+  7996630      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/include
+  7996634      8 -r-xr-xr-x   1 yarn     hadoop       6330 Apr  4 11:09 ./mr-framework/hadoop/include/Pipes.hh
+  7996632      4 -r-xr-xr-x   1 yarn     hadoop       2441 Apr  4 11:09 ./mr-framework/hadoop/include/StringUtils.hh
+  7996633      8 -r-xr-xr-x   1 yarn     hadoop       4514 Apr  4 11:09 ./mr-framework/hadoop/include/SerialUtils.hh
+  7996631     36 -r-xr-xr-x   1 yarn     hadoop      33361 Apr  4 11:09 ./mr-framework/hadoop/include/hdfs.h
+  7996635      4 -r-xr-xr-x   1 yarn     hadoop       3319 Apr  4 11:09 ./mr-framework/hadoop/include/TemplateFactory.hh
+  7996620      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/lib
+  7996621      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/lib/native
+  7996625    244 -r-xr-xr-x   1 yarn     hadoop     247370 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhdfs.so.0.0.0
+  7996622    376 -r-xr-xr-x   1 yarn     hadoop     384332 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhdfs.a
+  7996625    244 -r-xr-xr-x   1 yarn     hadoop     247370 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhdfs.so
+  7996627    444 -r-xr-xr-x   1 yarn     hadoop     453690 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadooputils.a
+  7996624   1340 -r-xr-xr-x   1 yarn     hadoop    1372076 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadooppipes.a
+  7996628    784 -r-xr-xr-x   1 yarn     hadoop     800196 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadoop.so
+  7996628    784 -r-xr-xr-x   1 yarn     hadoop     800196 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadoop.so.1.0.0
+  7996629   1348 -r-xr-xr-x   1 yarn     hadoop    1378834 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadoop.a
+  7996636     84 -r-xr-xr-x   1 yarn     hadoop      84854 Apr  4 11:09 ./mr-framework/hadoop/LICENSE.txt
+  7995636      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/libexec
+  7995637      4 -r-xr-xr-x   1 yarn     hadoop       2131 Apr  4 11:09 ./mr-framework/hadoop/libexec/yarn-config.cmd
+  7995640      8 -r-xr-xr-x   1 yarn     hadoop       5431 Apr  4 11:09 ./mr-framework/hadoop/libexec/kms-config.sh
+  7995642      4 -r-xr-xr-x   1 yarn     hadoop       2215 Apr  4 11:09 ./mr-framework/hadoop/libexec/yarn-config.sh
+  7995643     12 -r-xr-xr-x   1 yarn     hadoop       8270 Apr  4 11:09 ./mr-framework/hadoop/libexec/hadoop-config.cmd
+  7995639      4 -r-xr-xr-x   1 yarn     hadoop       2304 Apr  4 11:09 ./mr-framework/hadoop/libexec/mapred-config.sh
+  7995638     12 -r-xr-xr-x   1 yarn     hadoop      11678 Apr  4 11:09 ./mr-framework/hadoop/libexec/hadoop-config.sh
+  7995646      4 -r-xr-xr-x   1 yarn     hadoop       1640 Apr  4 11:09 ./mr-framework/hadoop/libexec/hdfs-config.cmd
+  7995644      8 -r-xr-xr-x   1 yarn     hadoop       5749 Apr  4 11:09 ./mr-framework/hadoop/libexec/httpfs-config.sh
+  7995641      4 -r-xr-xr-x   1 yarn     hadoop       1508 Apr  4 11:09 ./mr-framework/hadoop/libexec/hdfs-config.sh
+  7995645      4 -r-xr-xr-x   1 yarn     hadoop       1777 Apr  4 11:09 ./mr-framework/hadoop/libexec/mapred-config.cmd
+  7995648      4 drwxr-xr-x   4 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share
+  7995649      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/doc
+  7995650      4 drwxr-xr-x   6 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/doc/hadoop
+  7995659      4 drwxr-xr-x   9 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop
+  7996190      4 drwxr-xr-x   6 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/common
+  7996429      4 drwxr-xr-x   7 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/hdfs
+  7996069      4 drwxr-xr-x   5 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/tools
+  7996524      4 drwxr-xr-x   5 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/mapreduce
+  7996293      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/kms
+  7995953      4 drwxr-xr-x   5 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/yarn
+  7995660      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/httpfs
+  7995647      4 -r-xr-xr-x   1 yarn     hadoop       1366 Apr  4 11:09 ./mr-framework/hadoop/README.txt
+  7996668     16 -r-xr-xr-x   1 yarn     hadoop      15753 Apr  4 11:09 ./mr-framework/hadoop/NOTICE.txt
+  7996577      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/sbin
+  7996593      4 -r-xr-xr-x   1 yarn     hadoop       2291 Apr  4 11:09 ./mr-framework/hadoop/sbin/httpfs.sh
+  7996580      4 -r-xr-xr-x   1 yarn     hadoop       3815 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-dfs.sh
+  7996585      4 -r-xr-xr-x   1 yarn     hadoop       1441 Apr  4 11:09 ./mr-framework/hadoop/sbin/hadoop-daemons.sh
+  7996592      4 -r-xr-xr-x   1 yarn     hadoop       1552 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-all.sh
+  7996583      4 -r-xr-xr-x   1 yarn     hadoop       1260 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-balancer.sh
+  7996599      8 -r-xr-xr-x   1 yarn     hadoop       4161 Apr  4 11:09 ./mr-framework/hadoop/sbin/mr-jobhistory-daemon.sh
+  7996586      8 -r-xr-xr-x   1 yarn     hadoop       4376 Apr  4 11:09 ./mr-framework/hadoop/sbin/yarn-daemon.sh
+  7996598      4 -r-xr-xr-x   1 yarn     hadoop       1455 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-dfs.cmd
+  7996603      4 -r-xr-xr-x   1 yarn     hadoop       1729 Apr  4 11:09 ./mr-framework/hadoop/sbin/refresh-namenodes.sh
+  7996587      4 -r-xr-xr-x   1 yarn     hadoop       1421 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-yarn.sh
+  7996589      4 -r-xr-xr-x   1 yarn     hadoop       2752 Apr  4 11:09 ./mr-framework/hadoop/sbin/distribute-exclude.sh
+  7996602      4 -r-xr-xr-x   1 yarn     hadoop       1428 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-yarn.sh
+  7996600      4 -r-xr-xr-x   1 yarn     hadoop       1421 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-secure-dns.sh
+  7996595      4 -r-xr-xr-x   1 yarn     hadoop       3287 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-dfs.sh
+  7996597      4 -r-xr-xr-x   1 yarn     hadoop       1401 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-dfs.cmd
+  7996601      4 -r-xr-xr-x   1 yarn     hadoop       1640 Apr  4 11:09 ./mr-framework/hadoop/sbin/hdfs-config.cmd
+  7996590      4 -r-xr-xr-x   1 yarn     hadoop       1571 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-yarn.cmd
+  7996581      4 -r-xr-xr-x   1 yarn     hadoop       1770 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-all.cmd
+  7996584      4 -r-xr-xr-x   1 yarn     hadoop       2226 Apr  4 11:09 ./mr-framework/hadoop/sbin/slaves.sh
+  7996578      8 -r-xr-xr-x   1 yarn     hadoop       6546 Apr  4 11:09 ./mr-framework/hadoop/sbin/hadoop-daemon.sh
+  7996582      4 -r-xr-xr-x   1 yarn     hadoop       1209 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-balancer.sh
+  7996605      4 -r-xr-xr-x   1 yarn     hadoop       1642 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-yarn.cmd
+  7996591      4 -r-xr-xr-x   1 yarn     hadoop       1508 Apr  4 11:09 ./mr-framework/hadoop/sbin/hdfs-config.sh
+  7996588      4 -r-xr-xr-x   1 yarn     hadoop       1779 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-all.cmd
+  7996596      4 -r-xr-xr-x   1 yarn     hadoop       1434 Apr  4 11:09 ./mr-framework/hadoop/sbin/yarn-daemons.sh
+  7996594      4 -r-xr-xr-x   1 yarn     hadoop       1438 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-secure-dns.sh
+  7996604      4 -r-xr-xr-x   1 yarn     hadoop       1543 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-all.sh
+  7996579      4 -r-xr-xr-x   1 yarn     hadoop       3630 Apr  4 11:09 ./mr-framework/hadoop/sbin/kms.sh
+  7996677      8 -rwx------   1 yarn     hadoop       5730 Jun  6 14:59 ./launch_container.sh
+  7996681      4 -rwx------   1 yarn     hadoop        733 Jun  6 14:59 ./default_container_executor.sh
+  7996680      4 -rw-r--r--   1 yarn     hadoop         16 Jun  6 14:59 ./.default_container_executor_session.sh.crc
+  7996679      4 -rwx------   1 yarn     hadoop        679 Jun  6 14:59 ./default_container_executor_session.sh
+  7995631    124 -r-x------   1 yarn     hadoop     126131 Jun  6 14:59 ./job.xml
+  7996678      4 -rw-r--r--   1 yarn     hadoop         56 Jun  6 14:59 ./.launch_container.sh.crc
+  7996674      4 drwx--x---   2 yarn     hadoop       4096 Jun  6 14:59 ./tmp
+  7996675      4 -rw-r--r--   1 yarn     hadoop        129 Jun  6 14:59 ./container_tokens
+  7996682      4 -rw-r--r--   1 yarn     hadoop         16 Jun  6 14:59 ./.default_container_executor.sh.crc
+  7996676      4 -rw-r--r--   1 yarn     hadoop         12 Jun  6 14:59 ./.container_tokens.crc
+broken symlinks(find -L . -maxdepth 5 -type l -ls):
+
+End of LogType:directory.info
+
+LogType:launch_container.sh
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:5730
+Log Contents:
+#!/bin/bash
+
+export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/usr/hdp/current/hadoop-client/conf"}
+export STDOUT_LOGFILE_ENV="/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000002/stdout"
+export HADOOP_ROOT_LOGGER="INFO,console"
+export JAVA_HOME=${JAVA_HOME:-"/usr/lib/jvm/java-8-openjdk-amd64"}
+export NM_HOST="10.0.0.4"
+export HADOOP_CLASSPATH="$PWD:job.jar/job.jar:job.jar/classes/:job.jar/lib/*:$PWD/*:/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/container_1496759089610_0002_01_000001:job.jar/job.jar:job.jar/classes/:job.jar/lib/*:/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/container_1496759089610_0002_01_000001/*::/usr/hdp/current/hadoop-mapreduce-client/*:/usr/hdp/2.5.4.2-7/tez/*:/usr/hdp/2.5.4.2-7/tez/lib/*:/usr/hdp/2.5.4.2-7/tez/conf"
+export LD_LIBRARY_PATH="$PWD:/usr/hdp/2.5.4.2-7/hadoop/lib/native:/usr/hdp/2.5.4.2-7/hadoop/lib/native/Linux-amd64-64"
+export STDERR_LOGFILE_ENV="/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000002/stderr"
+export LOGNAME="sadmin"
+export JVM_PID="$$"
+export PWD="/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/container_1496759089610_0002_01_000002"
+export HADOOP_CLIENT_OPTS="-Xmx1024m -Xmx1024m  "
+export LOCAL_DIRS="/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002"
+export SHELL="/bin/bash"
+export NM_HTTP_PORT="30060"
+export LOG_DIRS="/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000002"
+export NM_AUX_SERVICE_mapreduce_shuffle="AAA0+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+"
+export NM_PORT="30050"
+export USER="sadmin"
+export HADOOP_YARN_HOME=${HADOOP_YARN_HOME:-"/usr/hdp/current/hadoop-yarn-nodemanager"}
+export CLASSPATH="$PWD:$PWD/mr-framework/hadoop/share/hadoop/mapreduce/*:$PWD/mr-framework/hadoop/share/hadoop/mapreduce/lib/*:$PWD/mr-framework/hadoop/share/hadoop/common/*:$PWD/mr-framework/hadoop/share/hadoop/common/lib/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/lib/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/lib/*:$PWD/mr-framework/hadoop/share/hadoop/tools/lib/*:/usr/hdp/2.5.4.2-7/hadoop/lib/hadoop-lzo-0.6.0.2.5.4.2-7.jar:/etc/hadoop/conf/secure:job.jar/job.jar:job.jar/classes/:job.jar/lib/*:$PWD/*"
+export HADOOP_TOKEN_FILE_LOCATION="/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/container_1496759089610_0002_01_000002/container_tokens"
+export NM_AUX_SERVICE_spark_shuffle=""
+export LOCAL_USER_DIRS="/mnt/resource/hadoop/yarn/local/usercache/sadmin/"
+export HOME="/home/"
+export NM_AUX_SERVICE_spark2_shuffle=""
+export CONTAINER_ID="container_1496759089610_0002_01_000002"
+export MALLOC_ARENA_MAX="4"
+ln -sf "/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/filecache/10/job.jar" "job.jar"
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+ln -sf "/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/filecache/11/job.xml" "job.xml"
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+ln -sf "/mnt/resource/hadoop/yarn/local/filecache/11/mapreduce.tar.gz" "mr-framework"
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+# Creating copy of launch script
+cp "launch_container.sh" "/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000002/launch_container.sh"
+chmod 640 "/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000002/launch_container.sh"
+# Determining directory contents
+echo "ls -l:" 1>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000002/directory.info"
+ls -l 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000002/directory.info"
+echo "find -L . -maxdepth 5 -ls:" 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000002/directory.info"
+find -L . -maxdepth 5 -ls 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000002/directory.info"
+echo "broken symlinks(find -L . -maxdepth 5 -type l -ls):" 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000002/directory.info"
+find -L . -maxdepth 5 -type l -ls 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000002/directory.info"
+exec /bin/bash -c "$JAVA_HOME/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=2.5.4.2-7 -Xmx512M -Xms512M -Djava.net.preferIPv4Stack=true -XX:NewRatio=8 -XX:+UseNUMA -XX:+UseParallelGC -Djava.io.tmpdir=$PWD/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000002 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog org.apache.hadoop.mapred.YarnChild 10.0.0.5 35128 attempt_1496759089610_0002_m_000000_0 2 1>/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000002/stdout 2>/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000002/stderr "
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+
+End of LogType:launch_container.sh
+
+LogType:stderr
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:243
+Log Contents:
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.impl.MetricsSystemImpl).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+
+End of LogType:stderr
+
+LogType:stdout
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:0
+Log Contents:
+
+End of LogType:stdout
+
+LogType:syslog
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:3891
+Log Contents:
+2017-06-06 14:59:34,073 INFO [main] org.apache.hadoop.security.SecurityUtil: Updating Configuration
+2017-06-06 14:59:34,184 WARN [main] org.apache.hadoop.metrics2.impl.MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-maptask.properties,hadoop-metrics2.properties
+2017-06-06 14:59:34,317 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-06-06 14:59:34,317 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MapTask metrics system started
+2017-06-06 14:59:34,333 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2017-06-06 14:59:34,333 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1496759089610_0002, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@7e057f43)
+2017-06-06 14:59:34,784 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2017-06-06 14:59:35,187 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002
+2017-06-06 14:59:37,433 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2017-06-06 14:59:37,597 WARN [main] org.apache.hadoop.metrics2.impl.MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-azure-file-system.properties,hadoop-metrics2.properties
+2017-06-06 14:59:37,608 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-06-06 14:59:37,608 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: azure-file-system metrics system started
+2017-06-06 14:59:37,729 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2017-06-06 14:59:37,729 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2017-06-06 14:59:37,754 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2017-06-06 14:59:38,373 INFO [main] org.apache.hadoop.mapred.MapTask: Processing split: wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/example/data/gutenberg/davinci.txt:0+1395667
+2017-06-06 14:59:38,770 INFO [main] org.apache.hadoop.mapred.MapTask: (EQUATOR) 0 kvi 80478204(321912816)
+2017-06-06 14:59:38,770 INFO [main] org.apache.hadoop.mapred.MapTask: mapreduce.task.io.sort.mb: 307
+2017-06-06 14:59:38,770 INFO [main] org.apache.hadoop.mapred.MapTask: soft limit at 225338976
+2017-06-06 14:59:38,770 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufvoid = 321912832
+2017-06-06 14:59:38,770 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 80478204; length = 20119552
+2017-06-06 14:59:38,778 INFO [main] org.apache.hadoop.mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2017-06-06 14:59:39,412 INFO [main] org.apache.hadoop.mapred.MapTask: Starting flush of map output
+2017-06-06 14:59:39,412 INFO [main] org.apache.hadoop.mapred.MapTask: Spilling map output
+2017-06-06 14:59:39,412 INFO [main] org.apache.hadoop.mapred.MapTask: bufstart = 0; bufend = 2387798; bufvoid = 321912832
+2017-06-06 14:59:39,412 INFO [main] org.apache.hadoop.mapred.MapTask: kvstart = 80478204(321912816); kvend = 79472780(317891120); length = 1005425/20119552
+2017-06-06 14:59:40,308 INFO [main] org.apache.hadoop.mapred.MapTask: Finished spill 0
+2017-06-06 14:59:40,318 INFO [main] org.apache.hadoop.mapred.Task: Task:attempt_1496759089610_0002_m_000000_0 is done. And is in the process of committing
+2017-06-06 14:59:40,502 INFO [main] org.apache.hadoop.mapred.Task: Task 'attempt_1496759089610_0002_m_000000_0' done.
+
+End of LogType:syslog
+
+Container: container_1496759089610_0002_01_000003 on 10.0.0.5_30050_1496761199374
+=================================================================================
+LogType:directory.info
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:15514
+Log Contents:
+ls -l:
+total 36
+-rw-r--r-- 1 yarn hadoop  129 Jun  6 14:59 container_tokens
+-rwx------ 1 yarn hadoop  679 Jun  6 14:59 default_container_executor_session.sh
+-rwx------ 1 yarn hadoop  733 Jun  6 14:59 default_container_executor.sh
+lrwxrwxrwx 1 yarn hadoop  109 Jun  6 14:59 job.jar -> /mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/filecache/11/job.jar
+lrwxrwxrwx 1 yarn hadoop  109 Jun  6 14:59 job.xml -> /mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/filecache/13/job.xml
+-rwx------ 1 yarn hadoop 5923 Jun  6 14:59 launch_container.sh
+lrwxrwxrwx 1 yarn hadoop   61 Jun  6 14:59 mr-framework -> /mnt/resource/hadoop/yarn/local/filecache/10/mapreduce.tar.gz
+drwx--x--- 2 yarn hadoop 4096 Jun  6 14:59 tmp
+find -L . -maxdepth 5 -ls:
+ 36701358      4 drwx--x---   3 yarn     hadoop       4096 Jun  6 14:59 .
+ 36700264      4 drwxr-xr-x   3 yarn     hadoop       4096 Jun  6 14:59 ./mr-framework
+ 36700281      4 drwxr-xr-x   9 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop
+ 36701250      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/bin
+ 36701256      4 -r-xr-xr-x   1 yarn     hadoop       1857 Apr  4 11:09 ./mr-framework/hadoop/bin/rcc
+ 36701263      8 -r-xr-xr-x   1 yarn     hadoop       7465 Apr  4 11:09 ./mr-framework/hadoop/bin/mapred.cmd
+ 36701262     12 -r-xr-xr-x   1 yarn     hadoop       8782 Apr  4 11:09 ./mr-framework/hadoop/bin/hdfs.cmd
+ 36701255      8 -r-xr-xr-x   1 yarn     hadoop       7120 Apr  4 11:09 ./mr-framework/hadoop/bin/hadoop
+ 36701253     12 -r-xr-xr-x   1 yarn     hadoop      12069 Apr  4 11:09 ./mr-framework/hadoop/bin/yarn.cmd
+ 36701257      4 -r-xr-xr-x   1 yarn     hadoop        830 Apr  4 11:09 ./mr-framework/hadoop/bin/kill-name-node
+ 36701259     12 -r-xr-xr-x   1 yarn     hadoop       8786 Apr  4 11:09 ./mr-framework/hadoop/bin/hadoop.cmd
+ 36701258      4 -r-xr-xr-x   1 yarn     hadoop        888 Apr  4 11:09 ./mr-framework/hadoop/bin/kill-secondary-name-node
+ 36701261    164 -r-xr-xr-x   1 yarn     hadoop     166732 Apr  4 11:09 ./mr-framework/hadoop/bin/container-executor
+ 36701251      8 -r-xr-xr-x   1 yarn     hadoop       6448 Apr  4 11:09 ./mr-framework/hadoop/bin/mapred
+ 36701260     16 -r-xr-xr-x   1 yarn     hadoop      12707 Apr  4 11:09 ./mr-framework/hadoop/bin/hdfs
+ 36701254    196 -r-xr-xr-x   1 yarn     hadoop     196636 Apr  4 11:09 ./mr-framework/hadoop/bin/test-container-executor
+ 36701252     16 -r-xr-xr-x   1 yarn     hadoop      14958 Apr  4 11:09 ./mr-framework/hadoop/bin/yarn
+ 36700293      4 -r-xr-xr-x   1 yarn     hadoop       1366 Apr  4 11:09 ./mr-framework/hadoop/README.txt
+ 36701312     16 -r-xr-xr-x   1 yarn     hadoop      15753 Apr  4 11:09 ./mr-framework/hadoop/NOTICE.txt
+ 36701281      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/etc
+ 36701282      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop
+ 36701306      4 -r-xr-xr-x   1 yarn     hadoop        775 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hdfs-site.xml
+ 36701304      4 -r-xr-xr-x   1 yarn     hadoop       1657 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/httpfs-log4j.properties
+ 36701300      8 -r-xr-xr-x   1 yarn     hadoop       4113 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/mapred-queues.xml.template
+ 36701289      8 -r-xr-xr-x   1 yarn     hadoop       5511 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/kms-site.xml
+ 36701308      4 -r-xr-xr-x   1 yarn     hadoop        690 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/yarn-site.xml
+ 36701290      4 -r-xr-xr-x   1 yarn     hadoop         10 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/slaves
+ 36701288      4 -r-xr-xr-x   1 yarn     hadoop        318 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/container-executor.cfg
+ 36701291      4 -r-xr-xr-x   1 yarn     hadoop       1631 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/kms-log4j.properties
+ 36701309      4 -r-xr-xr-x   1 yarn     hadoop       1527 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/kms-env.sh
+ 36701284      4 -r-xr-xr-x   1 yarn     hadoop        758 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/mapred-site.xml.template
+ 36701285      8 -r-xr-xr-x   1 yarn     hadoop       4436 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/capacity-scheduler.xml
+ 36701302      4 -r-xr-xr-x   1 yarn     hadoop       2490 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-metrics.properties
+ 36701292     12 -r-xr-xr-x   1 yarn     hadoop       9683 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-policy.xml
+ 36701286      8 -r-xr-xr-x   1 yarn     hadoop       4567 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/yarn-env.sh
+ 36701299      4 -r-xr-xr-x   1 yarn     hadoop       3979 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-env.cmd
+ 36701296      4 -r-xr-xr-x   1 yarn     hadoop        620 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/httpfs-site.xml
+ 36701311      4 -r-xr-xr-x   1 yarn     hadoop         21 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/httpfs-signature.secret
+ 36701287      4 -r-xr-xr-x   1 yarn     hadoop       1449 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/httpfs-env.sh
+ 36701303      4 -r-xr-xr-x   1 yarn     hadoop       2250 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/yarn-env.cmd
+ 36701294      4 -r-xr-xr-x   1 yarn     hadoop       2697 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/ssl-server.xml.example
+ 36701298      8 -r-xr-xr-x   1 yarn     hadoop       4529 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-env.sh
+ 36701307      4 -r-xr-xr-x   1 yarn     hadoop        774 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/core-site.xml
+ 36701310      4 -r-xr-xr-x   1 yarn     hadoop       2598 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-metrics2.properties
+ 36701297      4 -r-xr-xr-x   1 yarn     hadoop       1383 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/mapred-env.sh
+ 36701305      4 -r-xr-xr-x   1 yarn     hadoop        951 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/mapred-env.cmd
+ 36701283      4 -r-xr-xr-x   1 yarn     hadoop       2316 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/ssl-client.xml.example
+ 36701293      4 -r-xr-xr-x   1 yarn     hadoop       1335 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/configuration.xsl
+ 36701295     16 -r-xr-xr-x   1 yarn     hadoop      12302 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/log4j.properties
+ 36701301      4 -r-xr-xr-x   1 yarn     hadoop       3518 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/kms-acls.xml
+ 36701280     84 -r-xr-xr-x   1 yarn     hadoop      84854 Apr  4 11:09 ./mr-framework/hadoop/LICENSE.txt
+ 36700282      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/libexec
+ 36700285      4 -r-xr-xr-x   1 yarn     hadoop       2304 Apr  4 11:09 ./mr-framework/hadoop/libexec/mapred-config.sh
+ 36700292      4 -r-xr-xr-x   1 yarn     hadoop       1640 Apr  4 11:09 ./mr-framework/hadoop/libexec/hdfs-config.cmd
+ 36700291      4 -r-xr-xr-x   1 yarn     hadoop       1777 Apr  4 11:09 ./mr-framework/hadoop/libexec/mapred-config.cmd
+ 36700283      4 -r-xr-xr-x   1 yarn     hadoop       2131 Apr  4 11:09 ./mr-framework/hadoop/libexec/yarn-config.cmd
+ 36700287      4 -r-xr-xr-x   1 yarn     hadoop       1508 Apr  4 11:09 ./mr-framework/hadoop/libexec/hdfs-config.sh
+ 36700286      8 -r-xr-xr-x   1 yarn     hadoop       5431 Apr  4 11:09 ./mr-framework/hadoop/libexec/kms-config.sh
+ 36700288      4 -r-xr-xr-x   1 yarn     hadoop       2215 Apr  4 11:09 ./mr-framework/hadoop/libexec/yarn-config.sh
+ 36700284     12 -r-xr-xr-x   1 yarn     hadoop      11678 Apr  4 11:09 ./mr-framework/hadoop/libexec/hadoop-config.sh
+ 36700290      8 -r-xr-xr-x   1 yarn     hadoop       5749 Apr  4 11:09 ./mr-framework/hadoop/libexec/httpfs-config.sh
+ 36700289     12 -r-xr-xr-x   1 yarn     hadoop       8270 Apr  4 11:09 ./mr-framework/hadoop/libexec/hadoop-config.cmd
+ 36701274      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/include
+ 36701276      4 -r-xr-xr-x   1 yarn     hadoop       2441 Apr  4 11:09 ./mr-framework/hadoop/include/StringUtils.hh
+ 36701275     36 -r-xr-xr-x   1 yarn     hadoop      33361 Apr  4 11:09 ./mr-framework/hadoop/include/hdfs.h
+ 36701278      8 -r-xr-xr-x   1 yarn     hadoop       6330 Apr  4 11:09 ./mr-framework/hadoop/include/Pipes.hh
+ 36701277      8 -r-xr-xr-x   1 yarn     hadoop       4514 Apr  4 11:09 ./mr-framework/hadoop/include/SerialUtils.hh
+ 36701279      4 -r-xr-xr-x   1 yarn     hadoop       3319 Apr  4 11:09 ./mr-framework/hadoop/include/TemplateFactory.hh
+ 36700294      4 drwxr-xr-x   4 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share
+ 36700305      4 drwxr-xr-x   9 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop
+ 36700715      4 drwxr-xr-x   5 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/tools
+ 36701168      4 drwxr-xr-x   5 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/mapreduce
+ 36700836      4 drwxr-xr-x   6 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/common
+ 36701075      4 drwxr-xr-x   7 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/hdfs
+ 36700306      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/httpfs
+ 36700599      4 drwxr-xr-x   5 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/yarn
+ 36700939      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/kms
+ 36700295      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/doc
+ 36700296      4 drwxr-xr-x   6 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/doc/hadoop
+ 36701221      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/sbin
+ 36701231      4 -r-xr-xr-x   1 yarn     hadoop       1421 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-yarn.sh
+ 36701230      8 -r-xr-xr-x   1 yarn     hadoop       4376 Apr  4 11:09 ./mr-framework/hadoop/sbin/yarn-daemon.sh
+ 36701242      4 -r-xr-xr-x   1 yarn     hadoop       1455 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-dfs.cmd
+ 36701233      4 -r-xr-xr-x   1 yarn     hadoop       2752 Apr  4 11:09 ./mr-framework/hadoop/sbin/distribute-exclude.sh
+ 36701245      4 -r-xr-xr-x   1 yarn     hadoop       1640 Apr  4 11:09 ./mr-framework/hadoop/sbin/hdfs-config.cmd
+ 36701224      4 -r-xr-xr-x   1 yarn     hadoop       3815 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-dfs.sh
+ 36701249      4 -r-xr-xr-x   1 yarn     hadoop       1642 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-yarn.cmd
+ 36701239      4 -r-xr-xr-x   1 yarn     hadoop       3287 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-dfs.sh
+ 36701225      4 -r-xr-xr-x   1 yarn     hadoop       1770 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-all.cmd
+ 36701238      4 -r-xr-xr-x   1 yarn     hadoop       1438 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-secure-dns.sh
+ 36701241      4 -r-xr-xr-x   1 yarn     hadoop       1401 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-dfs.cmd
+ 36701226      4 -r-xr-xr-x   1 yarn     hadoop       1209 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-balancer.sh
+ 36701240      4 -r-xr-xr-x   1 yarn     hadoop       1434 Apr  4 11:09 ./mr-framework/hadoop/sbin/yarn-daemons.sh
+ 36701223      4 -r-xr-xr-x   1 yarn     hadoop       3630 Apr  4 11:09 ./mr-framework/hadoop/sbin/kms.sh
+ 36701222      8 -r-xr-xr-x   1 yarn     hadoop       6546 Apr  4 11:09 ./mr-framework/hadoop/sbin/hadoop-daemon.sh
+ 36701228      4 -r-xr-xr-x   1 yarn     hadoop       2226 Apr  4 11:09 ./mr-framework/hadoop/sbin/slaves.sh
+ 36701236      4 -r-xr-xr-x   1 yarn     hadoop       1552 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-all.sh
+ 36701235      4 -r-xr-xr-x   1 yarn     hadoop       1508 Apr  4 11:09 ./mr-framework/hadoop/sbin/hdfs-config.sh
+ 36701234      4 -r-xr-xr-x   1 yarn     hadoop       1571 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-yarn.cmd
+ 36701246      4 -r-xr-xr-x   1 yarn     hadoop       1428 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-yarn.sh
+ 36701243      8 -r-xr-xr-x   1 yarn     hadoop       4161 Apr  4 11:09 ./mr-framework/hadoop/sbin/mr-jobhistory-daemon.sh
+ 36701247      4 -r-xr-xr-x   1 yarn     hadoop       1729 Apr  4 11:09 ./mr-framework/hadoop/sbin/refresh-namenodes.sh
+ 36701227      4 -r-xr-xr-x   1 yarn     hadoop       1260 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-balancer.sh
+ 36701244      4 -r-xr-xr-x   1 yarn     hadoop       1421 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-secure-dns.sh
+ 36701229      4 -r-xr-xr-x   1 yarn     hadoop       1441 Apr  4 11:09 ./mr-framework/hadoop/sbin/hadoop-daemons.sh
+ 36701232      4 -r-xr-xr-x   1 yarn     hadoop       1779 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-all.cmd
+ 36701248      4 -r-xr-xr-x   1 yarn     hadoop       1543 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-all.sh
+ 36701237      4 -r-xr-xr-x   1 yarn     hadoop       2291 Apr  4 11:09 ./mr-framework/hadoop/sbin/httpfs.sh
+ 36701264      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/lib
+ 36701265      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/lib/native
+ 36701269    244 -r-xr-xr-x   1 yarn     hadoop     247370 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhdfs.so
+ 36701266    376 -r-xr-xr-x   1 yarn     hadoop     384332 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhdfs.a
+ 36701271    444 -r-xr-xr-x   1 yarn     hadoop     453690 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadooputils.a
+ 36701272    784 -r-xr-xr-x   1 yarn     hadoop     800196 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadoop.so.1.0.0
+ 36701272    784 -r-xr-xr-x   1 yarn     hadoop     800196 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadoop.so
+ 36701269    244 -r-xr-xr-x   1 yarn     hadoop     247370 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhdfs.so.0.0.0
+ 36701268   1340 -r-xr-xr-x   1 yarn     hadoop    1372076 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadooppipes.a
+ 36701273   1348 -r-xr-xr-x   1 yarn     hadoop    1378834 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadoop.a
+ 36701368      4 -rw-r--r--   1 yarn     hadoop         16 Jun  6 14:59 ./.default_container_executor.sh.crc
+ 36701366      4 -rw-r--r--   1 yarn     hadoop         16 Jun  6 14:59 ./.default_container_executor_session.sh.crc
+ 36701363      8 -rwx------   1 yarn     hadoop       5923 Jun  6 14:59 ./launch_container.sh
+ 36701365      4 -rwx------   1 yarn     hadoop        679 Jun  6 14:59 ./default_container_executor_session.sh
+ 36701362      4 -rw-r--r--   1 yarn     hadoop         12 Jun  6 14:59 ./.container_tokens.crc
+ 36701360      4 drwx--x---   2 yarn     hadoop       4096 Jun  6 14:59 ./tmp
+ 36700274      4 drwx------   2 yarn     hadoop       4096 Jun  6 14:58 ./job.jar
+ 36700272    268 -r-x------   1 yarn     hadoop     273454 Jun  6 14:58 ./job.jar/job.jar
+ 36701364      4 -rw-r--r--   1 yarn     hadoop         56 Jun  6 14:59 ./.launch_container.sh.crc
+ 36701367      4 -rwx------   1 yarn     hadoop        733 Jun  6 14:59 ./default_container_executor.sh
+ 36701361      4 -rw-r--r--   1 yarn     hadoop        129 Jun  6 14:59 ./container_tokens
+ 36700279    124 -r-x------   1 yarn     hadoop     126131 Jun  6 14:58 ./job.xml
+broken symlinks(find -L . -maxdepth 5 -type l -ls):
+
+End of LogType:directory.info
+
+LogType:launch_container.sh
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:5923
+Log Contents:
+#!/bin/bash
+
+export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/usr/hdp/current/hadoop-client/conf"}
+export STDOUT_LOGFILE_ENV="/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000003/stdout"
+export HADOOP_ROOT_LOGGER="INFO,console"
+export JAVA_HOME=${JAVA_HOME:-"/usr/lib/jvm/java-8-openjdk-amd64"}
+export NM_HOST="10.0.0.5"
+export HADOOP_CLASSPATH="$PWD:job.jar/job.jar:job.jar/classes/:job.jar/lib/*:$PWD/*:/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/container_1496759089610_0002_01_000001:job.jar/job.jar:job.jar/classes/:job.jar/lib/*:/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/container_1496759089610_0002_01_000001/*::/usr/hdp/current/hadoop-mapreduce-client/*:/usr/hdp/2.5.4.2-7/tez/*:/usr/hdp/2.5.4.2-7/tez/lib/*:/usr/hdp/2.5.4.2-7/tez/conf"
+export LD_LIBRARY_PATH="$PWD:/usr/hdp/2.5.4.2-7/hadoop/lib/native:/usr/hdp/2.5.4.2-7/hadoop/lib/native/Linux-amd64-64"
+export STDERR_LOGFILE_ENV="/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000003/stderr"
+export LOGNAME="sadmin"
+export JVM_PID="$$"
+export PWD="/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/container_1496759089610_0002_01_000003"
+export HADOOP_CLIENT_OPTS="-Xmx1024m -Xmx1024m  "
+export LOCAL_DIRS="/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002"
+export SHELL="/bin/bash"
+export NM_HTTP_PORT="30060"
+export LOG_DIRS="/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000003"
+export NM_AUX_SERVICE_mapreduce_shuffle="AAA0+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+"
+export NM_PORT="30050"
+export USER="sadmin"
+export HADOOP_YARN_HOME=${HADOOP_YARN_HOME:-"/usr/hdp/current/hadoop-yarn-nodemanager"}
+export CLASSPATH="$PWD:$PWD/mr-framework/hadoop/share/hadoop/mapreduce/*:$PWD/mr-framework/hadoop/share/hadoop/mapreduce/lib/*:$PWD/mr-framework/hadoop/share/hadoop/common/*:$PWD/mr-framework/hadoop/share/hadoop/common/lib/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/lib/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/lib/*:$PWD/mr-framework/hadoop/share/hadoop/tools/lib/*:/usr/hdp/2.5.4.2-7/hadoop/lib/hadoop-lzo-0.6.0.2.5.4.2-7.jar:/etc/hadoop/conf/secure:job.jar/job.jar:job.jar/classes/:job.jar/lib/*:$PWD/*"
+export HADOOP_TOKEN_FILE_LOCATION="/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/container_1496759089610_0002_01_000003/container_tokens"
+export NM_AUX_SERVICE_spark_shuffle=""
+export LOCAL_USER_DIRS="/mnt/resource/hadoop/yarn/local/usercache/sadmin/"
+export HOME="/home/"
+export NM_AUX_SERVICE_spark2_shuffle=""
+export CONTAINER_ID="container_1496759089610_0002_01_000003"
+export MALLOC_ARENA_MAX="4"
+ln -sf "/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/filecache/13/job.xml" "job.xml"
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+ln -sf "/mnt/resource/hadoop/yarn/local/filecache/10/mapreduce.tar.gz" "mr-framework"
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+ln -sf "/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/filecache/11/job.jar" "job.jar"
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+# Creating copy of launch script
+cp "launch_container.sh" "/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000003/launch_container.sh"
+chmod 640 "/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000003/launch_container.sh"
+# Determining directory contents
+echo "ls -l:" 1>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000003/directory.info"
+ls -l 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000003/directory.info"
+echo "find -L . -maxdepth 5 -ls:" 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000003/directory.info"
+find -L . -maxdepth 5 -ls 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000003/directory.info"
+echo "broken symlinks(find -L . -maxdepth 5 -type l -ls):" 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000003/directory.info"
+find -L . -maxdepth 5 -type l -ls 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000003/directory.info"
+exec /bin/bash -c "$JAVA_HOME/bin/java -server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=2.5.4.2-7 -Xmx1024M -Xms1024M -Djava.net.preferIPv4Stack=true -XX:NewRatio=8 -XX:+UseNUMA -XX:+UseParallelGC -Djava.io.tmpdir=$PWD/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000003 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog -Dyarn.app.mapreduce.shuffle.logger=INFO,shuffleCLA -Dyarn.app.mapreduce.shuffle.logfile=syslog.shuffle -Dyarn.app.mapreduce.shuffle.log.filesize=0 -Dyarn.app.mapreduce.shuffle.log.backups=0 org.apache.hadoop.mapred.YarnChild 10.0.0.5 35128 attempt_1496759089610_0002_r_000000_0 3 1>/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000003/stdout 2>/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000003/stderr "
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+
+End of LogType:launch_container.sh
+
+LogType:stderr
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:243
+Log Contents:
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.impl.MetricsSystemImpl).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+
+End of LogType:stderr
+
+LogType:stdout
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:0
+Log Contents:
+
+End of LogType:stdout
+
+LogType:syslog
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:3567
+Log Contents:
+2017-06-06 14:59:45,066 INFO [main] org.apache.hadoop.security.SecurityUtil: Updating Configuration
+2017-06-06 14:59:45,158 WARN [main] org.apache.hadoop.metrics2.impl.MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-reducetask.properties,hadoop-metrics2.properties
+2017-06-06 14:59:45,296 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-06-06 14:59:45,296 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ReduceTask metrics system started
+2017-06-06 14:59:45,314 INFO [main] org.apache.hadoop.mapred.YarnChild: Executing with tokens:
+2017-06-06 14:59:45,315 INFO [main] org.apache.hadoop.mapred.YarnChild: Kind: mapreduce.job, Service: job_1496759089610_0002, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@3ba987b8)
+2017-06-06 14:59:45,709 INFO [main] org.apache.hadoop.mapred.YarnChild: Sleeping for 0ms before retrying again. Got null now.
+2017-06-06 14:59:46,123 INFO [main] org.apache.hadoop.mapred.YarnChild: mapreduce.cluster.local.dir for child: /mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002
+2017-06-06 14:59:46,662 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+2017-06-06 14:59:46,823 WARN [main] org.apache.hadoop.metrics2.impl.MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-azure-file-system.properties,hadoop-metrics2.properties
+2017-06-06 14:59:46,835 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-06-06 14:59:46,835 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: azure-file-system metrics system started
+2017-06-06 14:59:46,961 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2017-06-06 14:59:46,961 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2017-06-06 14:59:46,979 INFO [main] org.apache.hadoop.mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2017-06-06 14:59:47,037 INFO [main] org.apache.hadoop.mapred.ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@6138e79a
+2017-06-06 14:59:48,076 INFO [main] org.apache.hadoop.conf.Configuration.deprecation: mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+2017-06-06 14:59:48,703 INFO [main] org.apache.hadoop.mapred.Task: Task:attempt_1496759089610_0002_r_000000_0 is done. And is in the process of committing
+2017-06-06 14:59:48,790 INFO [main] org.apache.hadoop.mapred.Task: Task attempt_1496759089610_0002_r_000000_0 is allowed to commit now
+2017-06-06 14:59:49,042 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: Saved output of task 'attempt_1496759089610_0002_r_000000_0' to wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/example/data/davinciwordcount
+2017-06-06 14:59:49,083 INFO [main] org.apache.hadoop.mapred.Task: Task 'attempt_1496759089610_0002_r_000000_0' done.
+2017-06-06 14:59:49,187 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping ReduceTask metrics system...
+2017-06-06 14:59:49,188 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ReduceTask metrics system stopped.
+2017-06-06 14:59:49,188 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: ReduceTask metrics system shutdown complete.
+
+End of LogType:syslog
+
+LogType:syslog.shuffle
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:3207
+Log Contents:
+2017-06-06 14:59:47,180 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: MergerManager: memoryLimit=741343232, maxSingleShuffleLimit=185335808, mergeThreshold=489286560, ioSortFactor=100, memToMemMergeOutputsThreshold=100
+2017-06-06 14:59:47,188 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: attempt_1496759089610_0002_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+2017-06-06 14:59:47,199 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: attempt_1496759089610_0002_r_000000_0: Got 1 new map-outputs
+2017-06-06 14:59:47,203 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: Assigning 10.0.0.4:13562 with 1 to fetcher#1
+2017-06-06 14:59:47,203 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: assigned 1 of 1 to 10.0.0.4:13562 to fetcher#1
+2017-06-06 14:59:47,464 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.Fetcher: for url=13562/mapOutput?job=job_1496759089610_0002&reduce=0&map=attempt_1496759089610_0002_m_000000_0 sent hash and received reply
+2017-06-06 14:59:47,479 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.Fetcher: fetcher#1 about to shuffle output of map attempt_1496759089610_0002_m_000000_0 decomp: 466757 len: 466761 to MEMORY
+2017-06-06 14:59:47,502 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.InMemoryMapOutput: Read 466757 bytes from map-output for attempt_1496759089610_0002_m_000000_0
+2017-06-06 14:59:47,506 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: closeInMemoryFile -> map-output of size: 466757, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->466757
+2017-06-06 14:59:47,531 INFO [fetcher#1] org.apache.hadoop.mapreduce.task.reduce.ShuffleSchedulerImpl: 10.0.0.4:13562 freed by fetcher#1 in 328ms
+2017-06-06 14:59:47,531 INFO [EventFetcher for fetching Map Completion Events] org.apache.hadoop.mapreduce.task.reduce.EventFetcher: EventFetcher is interrupted.. Returning
+2017-06-06 14:59:47,550 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+2017-06-06 14:59:47,563 INFO [main] org.apache.hadoop.mapred.Merger: Merging 1 sorted segments
+2017-06-06 14:59:47,564 INFO [main] org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 466745 bytes
+2017-06-06 14:59:47,653 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Merged 1 segments, 466757 bytes to disk to satisfy reduce memory limit
+2017-06-06 14:59:47,654 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Merging 1 files, 466761 bytes from disk
+2017-06-06 14:59:47,655 INFO [main] org.apache.hadoop.mapreduce.task.reduce.MergeManagerImpl: Merging 0 segments, 0 bytes from memory into reduce
+2017-06-06 14:59:47,655 INFO [main] org.apache.hadoop.mapred.Merger: Merging 1 sorted segments
+2017-06-06 14:59:47,663 INFO [main] org.apache.hadoop.mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 466745 bytes
+
+End of LogType:syslog.shuffle
+
+Container: container_1496759089610_0002_01_000001 on 10.0.0.5_30050_1496761199374
+=================================================================================
+LogType:directory.info
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:15859
+Log Contents:
+ls -l:
+total 40
+-rw-r--r-- 1 yarn hadoop  100 Jun  6 14:59 container_tokens
+-rwx------ 1 yarn hadoop  679 Jun  6 14:59 default_container_executor_session.sh
+-rwx------ 1 yarn hadoop  733 Jun  6 14:59 default_container_executor.sh
+lrwxrwxrwx 1 yarn hadoop  109 Jun  6 14:59 job.jar -> /mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/filecache/11/job.jar
+drwxr-xr-x 2 yarn hadoop 4096 Jun  6 14:59 jobSubmitDir
+lrwxrwxrwx 1 yarn hadoop  109 Jun  6 14:59 job.xml -> /mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/filecache/13/job.xml
+-rwx------ 1 yarn hadoop 5813 Jun  6 14:59 launch_container.sh
+lrwxrwxrwx 1 yarn hadoop   61 Jun  6 14:59 mr-framework -> /mnt/resource/hadoop/yarn/local/filecache/10/mapreduce.tar.gz
+drwx--x--- 2 yarn hadoop 4096 Jun  6 14:59 tmp
+find -L . -maxdepth 5 -ls:
+ 36701316      4 drwx--x---   4 yarn     hadoop       4096 Jun  6 14:59 .
+ 36700264      4 drwxr-xr-x   3 yarn     hadoop       4096 Jun  6 14:59 ./mr-framework
+ 36700281      4 drwxr-xr-x   9 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop
+ 36701250      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/bin
+ 36701256      4 -r-xr-xr-x   1 yarn     hadoop       1857 Apr  4 11:09 ./mr-framework/hadoop/bin/rcc
+ 36701263      8 -r-xr-xr-x   1 yarn     hadoop       7465 Apr  4 11:09 ./mr-framework/hadoop/bin/mapred.cmd
+ 36701262     12 -r-xr-xr-x   1 yarn     hadoop       8782 Apr  4 11:09 ./mr-framework/hadoop/bin/hdfs.cmd
+ 36701255      8 -r-xr-xr-x   1 yarn     hadoop       7120 Apr  4 11:09 ./mr-framework/hadoop/bin/hadoop
+ 36701253     12 -r-xr-xr-x   1 yarn     hadoop      12069 Apr  4 11:09 ./mr-framework/hadoop/bin/yarn.cmd
+ 36701257      4 -r-xr-xr-x   1 yarn     hadoop        830 Apr  4 11:09 ./mr-framework/hadoop/bin/kill-name-node
+ 36701259     12 -r-xr-xr-x   1 yarn     hadoop       8786 Apr  4 11:09 ./mr-framework/hadoop/bin/hadoop.cmd
+ 36701258      4 -r-xr-xr-x   1 yarn     hadoop        888 Apr  4 11:09 ./mr-framework/hadoop/bin/kill-secondary-name-node
+ 36701261    164 -r-xr-xr-x   1 yarn     hadoop     166732 Apr  4 11:09 ./mr-framework/hadoop/bin/container-executor
+ 36701251      8 -r-xr-xr-x   1 yarn     hadoop       6448 Apr  4 11:09 ./mr-framework/hadoop/bin/mapred
+ 36701260     16 -r-xr-xr-x   1 yarn     hadoop      12707 Apr  4 11:09 ./mr-framework/hadoop/bin/hdfs
+ 36701254    196 -r-xr-xr-x   1 yarn     hadoop     196636 Apr  4 11:09 ./mr-framework/hadoop/bin/test-container-executor
+ 36701252     16 -r-xr-xr-x   1 yarn     hadoop      14958 Apr  4 11:09 ./mr-framework/hadoop/bin/yarn
+ 36700293      4 -r-xr-xr-x   1 yarn     hadoop       1366 Apr  4 11:09 ./mr-framework/hadoop/README.txt
+ 36701312     16 -r-xr-xr-x   1 yarn     hadoop      15753 Apr  4 11:09 ./mr-framework/hadoop/NOTICE.txt
+ 36701281      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/etc
+ 36701282      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop
+ 36701306      4 -r-xr-xr-x   1 yarn     hadoop        775 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hdfs-site.xml
+ 36701304      4 -r-xr-xr-x   1 yarn     hadoop       1657 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/httpfs-log4j.properties
+ 36701300      8 -r-xr-xr-x   1 yarn     hadoop       4113 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/mapred-queues.xml.template
+ 36701289      8 -r-xr-xr-x   1 yarn     hadoop       5511 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/kms-site.xml
+ 36701308      4 -r-xr-xr-x   1 yarn     hadoop        690 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/yarn-site.xml
+ 36701290      4 -r-xr-xr-x   1 yarn     hadoop         10 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/slaves
+ 36701288      4 -r-xr-xr-x   1 yarn     hadoop        318 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/container-executor.cfg
+ 36701291      4 -r-xr-xr-x   1 yarn     hadoop       1631 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/kms-log4j.properties
+ 36701309      4 -r-xr-xr-x   1 yarn     hadoop       1527 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/kms-env.sh
+ 36701284      4 -r-xr-xr-x   1 yarn     hadoop        758 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/mapred-site.xml.template
+ 36701285      8 -r-xr-xr-x   1 yarn     hadoop       4436 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/capacity-scheduler.xml
+ 36701302      4 -r-xr-xr-x   1 yarn     hadoop       2490 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-metrics.properties
+ 36701292     12 -r-xr-xr-x   1 yarn     hadoop       9683 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-policy.xml
+ 36701286      8 -r-xr-xr-x   1 yarn     hadoop       4567 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/yarn-env.sh
+ 36701299      4 -r-xr-xr-x   1 yarn     hadoop       3979 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-env.cmd
+ 36701296      4 -r-xr-xr-x   1 yarn     hadoop        620 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/httpfs-site.xml
+ 36701311      4 -r-xr-xr-x   1 yarn     hadoop         21 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/httpfs-signature.secret
+ 36701287      4 -r-xr-xr-x   1 yarn     hadoop       1449 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/httpfs-env.sh
+ 36701303      4 -r-xr-xr-x   1 yarn     hadoop       2250 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/yarn-env.cmd
+ 36701294      4 -r-xr-xr-x   1 yarn     hadoop       2697 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/ssl-server.xml.example
+ 36701298      8 -r-xr-xr-x   1 yarn     hadoop       4529 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-env.sh
+ 36701307      4 -r-xr-xr-x   1 yarn     hadoop        774 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/core-site.xml
+ 36701310      4 -r-xr-xr-x   1 yarn     hadoop       2598 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/hadoop-metrics2.properties
+ 36701297      4 -r-xr-xr-x   1 yarn     hadoop       1383 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/mapred-env.sh
+ 36701305      4 -r-xr-xr-x   1 yarn     hadoop        951 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/mapred-env.cmd
+ 36701283      4 -r-xr-xr-x   1 yarn     hadoop       2316 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/ssl-client.xml.example
+ 36701293      4 -r-xr-xr-x   1 yarn     hadoop       1335 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/configuration.xsl
+ 36701295     16 -r-xr-xr-x   1 yarn     hadoop      12302 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/log4j.properties
+ 36701301      4 -r-xr-xr-x   1 yarn     hadoop       3518 Apr  4 11:09 ./mr-framework/hadoop/etc/hadoop/kms-acls.xml
+ 36701280     84 -r-xr-xr-x   1 yarn     hadoop      84854 Apr  4 11:09 ./mr-framework/hadoop/LICENSE.txt
+ 36700282      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/libexec
+ 36700285      4 -r-xr-xr-x   1 yarn     hadoop       2304 Apr  4 11:09 ./mr-framework/hadoop/libexec/mapred-config.sh
+ 36700292      4 -r-xr-xr-x   1 yarn     hadoop       1640 Apr  4 11:09 ./mr-framework/hadoop/libexec/hdfs-config.cmd
+ 36700291      4 -r-xr-xr-x   1 yarn     hadoop       1777 Apr  4 11:09 ./mr-framework/hadoop/libexec/mapred-config.cmd
+ 36700283      4 -r-xr-xr-x   1 yarn     hadoop       2131 Apr  4 11:09 ./mr-framework/hadoop/libexec/yarn-config.cmd
+ 36700287      4 -r-xr-xr-x   1 yarn     hadoop       1508 Apr  4 11:09 ./mr-framework/hadoop/libexec/hdfs-config.sh
+ 36700286      8 -r-xr-xr-x   1 yarn     hadoop       5431 Apr  4 11:09 ./mr-framework/hadoop/libexec/kms-config.sh
+ 36700288      4 -r-xr-xr-x   1 yarn     hadoop       2215 Apr  4 11:09 ./mr-framework/hadoop/libexec/yarn-config.sh
+ 36700284     12 -r-xr-xr-x   1 yarn     hadoop      11678 Apr  4 11:09 ./mr-framework/hadoop/libexec/hadoop-config.sh
+ 36700290      8 -r-xr-xr-x   1 yarn     hadoop       5749 Apr  4 11:09 ./mr-framework/hadoop/libexec/httpfs-config.sh
+ 36700289     12 -r-xr-xr-x   1 yarn     hadoop       8270 Apr  4 11:09 ./mr-framework/hadoop/libexec/hadoop-config.cmd
+ 36701274      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/include
+ 36701276      4 -r-xr-xr-x   1 yarn     hadoop       2441 Apr  4 11:09 ./mr-framework/hadoop/include/StringUtils.hh
+ 36701275     36 -r-xr-xr-x   1 yarn     hadoop      33361 Apr  4 11:09 ./mr-framework/hadoop/include/hdfs.h
+ 36701278      8 -r-xr-xr-x   1 yarn     hadoop       6330 Apr  4 11:09 ./mr-framework/hadoop/include/Pipes.hh
+ 36701277      8 -r-xr-xr-x   1 yarn     hadoop       4514 Apr  4 11:09 ./mr-framework/hadoop/include/SerialUtils.hh
+ 36701279      4 -r-xr-xr-x   1 yarn     hadoop       3319 Apr  4 11:09 ./mr-framework/hadoop/include/TemplateFactory.hh
+ 36700294      4 drwxr-xr-x   4 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share
+ 36700305      4 drwxr-xr-x   9 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop
+ 36700715      4 drwxr-xr-x   5 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/tools
+ 36701168      4 drwxr-xr-x   5 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/mapreduce
+ 36700836      4 drwxr-xr-x   6 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/common
+ 36701075      4 drwxr-xr-x   7 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/hdfs
+ 36700306      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/httpfs
+ 36700599      4 drwxr-xr-x   5 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/yarn
+ 36700939      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/hadoop/kms
+ 36700295      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/doc
+ 36700296      4 drwxr-xr-x   6 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/share/doc/hadoop
+ 36701221      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/sbin
+ 36701231      4 -r-xr-xr-x   1 yarn     hadoop       1421 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-yarn.sh
+ 36701230      8 -r-xr-xr-x   1 yarn     hadoop       4376 Apr  4 11:09 ./mr-framework/hadoop/sbin/yarn-daemon.sh
+ 36701242      4 -r-xr-xr-x   1 yarn     hadoop       1455 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-dfs.cmd
+ 36701233      4 -r-xr-xr-x   1 yarn     hadoop       2752 Apr  4 11:09 ./mr-framework/hadoop/sbin/distribute-exclude.sh
+ 36701245      4 -r-xr-xr-x   1 yarn     hadoop       1640 Apr  4 11:09 ./mr-framework/hadoop/sbin/hdfs-config.cmd
+ 36701224      4 -r-xr-xr-x   1 yarn     hadoop       3815 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-dfs.sh
+ 36701249      4 -r-xr-xr-x   1 yarn     hadoop       1642 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-yarn.cmd
+ 36701239      4 -r-xr-xr-x   1 yarn     hadoop       3287 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-dfs.sh
+ 36701225      4 -r-xr-xr-x   1 yarn     hadoop       1770 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-all.cmd
+ 36701238      4 -r-xr-xr-x   1 yarn     hadoop       1438 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-secure-dns.sh
+ 36701241      4 -r-xr-xr-x   1 yarn     hadoop       1401 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-dfs.cmd
+ 36701226      4 -r-xr-xr-x   1 yarn     hadoop       1209 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-balancer.sh
+ 36701240      4 -r-xr-xr-x   1 yarn     hadoop       1434 Apr  4 11:09 ./mr-framework/hadoop/sbin/yarn-daemons.sh
+ 36701223      4 -r-xr-xr-x   1 yarn     hadoop       3630 Apr  4 11:09 ./mr-framework/hadoop/sbin/kms.sh
+ 36701222      8 -r-xr-xr-x   1 yarn     hadoop       6546 Apr  4 11:09 ./mr-framework/hadoop/sbin/hadoop-daemon.sh
+ 36701228      4 -r-xr-xr-x   1 yarn     hadoop       2226 Apr  4 11:09 ./mr-framework/hadoop/sbin/slaves.sh
+ 36701236      4 -r-xr-xr-x   1 yarn     hadoop       1552 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-all.sh
+ 36701235      4 -r-xr-xr-x   1 yarn     hadoop       1508 Apr  4 11:09 ./mr-framework/hadoop/sbin/hdfs-config.sh
+ 36701234      4 -r-xr-xr-x   1 yarn     hadoop       1571 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-yarn.cmd
+ 36701246      4 -r-xr-xr-x   1 yarn     hadoop       1428 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-yarn.sh
+ 36701243      8 -r-xr-xr-x   1 yarn     hadoop       4161 Apr  4 11:09 ./mr-framework/hadoop/sbin/mr-jobhistory-daemon.sh
+ 36701247      4 -r-xr-xr-x   1 yarn     hadoop       1729 Apr  4 11:09 ./mr-framework/hadoop/sbin/refresh-namenodes.sh
+ 36701227      4 -r-xr-xr-x   1 yarn     hadoop       1260 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-balancer.sh
+ 36701244      4 -r-xr-xr-x   1 yarn     hadoop       1421 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-secure-dns.sh
+ 36701229      4 -r-xr-xr-x   1 yarn     hadoop       1441 Apr  4 11:09 ./mr-framework/hadoop/sbin/hadoop-daemons.sh
+ 36701232      4 -r-xr-xr-x   1 yarn     hadoop       1779 Apr  4 11:09 ./mr-framework/hadoop/sbin/start-all.cmd
+ 36701248      4 -r-xr-xr-x   1 yarn     hadoop       1543 Apr  4 11:09 ./mr-framework/hadoop/sbin/stop-all.sh
+ 36701237      4 -r-xr-xr-x   1 yarn     hadoop       2291 Apr  4 11:09 ./mr-framework/hadoop/sbin/httpfs.sh
+ 36701264      4 drwxr-xr-x   3 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/lib
+ 36701265      4 drwxr-xr-x   2 yarn     hadoop       4096 Apr  4 11:09 ./mr-framework/hadoop/lib/native
+ 36701269    244 -r-xr-xr-x   1 yarn     hadoop     247370 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhdfs.so
+ 36701266    376 -r-xr-xr-x   1 yarn     hadoop     384332 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhdfs.a
+ 36701271    444 -r-xr-xr-x   1 yarn     hadoop     453690 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadooputils.a
+ 36701272    784 -r-xr-xr-x   1 yarn     hadoop     800196 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadoop.so.1.0.0
+ 36701272    784 -r-xr-xr-x   1 yarn     hadoop     800196 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadoop.so
+ 36701269    244 -r-xr-xr-x   1 yarn     hadoop     247370 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhdfs.so.0.0.0
+ 36701268   1340 -r-xr-xr-x   1 yarn     hadoop    1372076 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadooppipes.a
+ 36701273   1348 -r-xr-xr-x   1 yarn     hadoop    1378834 Apr  4 11:09 ./mr-framework/hadoop/lib/native/libhadoop.a
+ 36701326      4 -rw-r--r--   1 yarn     hadoop         16 Jun  6 14:59 ./.default_container_executor.sh.crc
+ 36701324      4 -rw-r--r--   1 yarn     hadoop         16 Jun  6 14:59 ./.default_container_executor_session.sh.crc
+ 36701321      8 -rwx------   1 yarn     hadoop       5813 Jun  6 14:59 ./launch_container.sh
+ 36701323      4 -rwx------   1 yarn     hadoop        679 Jun  6 14:59 ./default_container_executor_session.sh
+ 36701320      4 -rw-r--r--   1 yarn     hadoop         12 Jun  6 14:59 ./.container_tokens.crc
+ 36701318      4 drwx--x---   2 yarn     hadoop       4096 Jun  6 14:59 ./tmp
+ 36701328      4 drwxr-xr-x   2 yarn     hadoop       4096 Jun  6 14:59 ./jobSubmitDir
+ 36700276      4 -r-x------   1 yarn     hadoop        165 Jun  6 14:58 ./jobSubmitDir/job.split
+ 36700269      4 -r-x------   1 yarn     hadoop         26 Jun  6 14:58 ./jobSubmitDir/job.splitmetainfo
+ 36700274      4 drwx------   2 yarn     hadoop       4096 Jun  6 14:58 ./job.jar
+ 36700272    268 -r-x------   1 yarn     hadoop     273454 Jun  6 14:58 ./job.jar/job.jar
+ 36701322      4 -rw-r--r--   1 yarn     hadoop         56 Jun  6 14:59 ./.launch_container.sh.crc
+ 36701325      4 -rwx------   1 yarn     hadoop        733 Jun  6 14:59 ./default_container_executor.sh
+ 36701319      4 -rw-r--r--   1 yarn     hadoop        100 Jun  6 14:59 ./container_tokens
+ 36700279    124 -r-x------   1 yarn     hadoop     126131 Jun  6 14:58 ./job.xml
+broken symlinks(find -L . -maxdepth 5 -type l -ls):
+
+End of LogType:directory.info
+
+LogType:launch_container.sh
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:5813
+Log Contents:
+#!/bin/bash
+
+export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/usr/hdp/current/hadoop-client/conf"}
+export MAX_APP_ATTEMPTS="5"
+export JAVA_HOME=${JAVA_HOME:-"/usr/lib/jvm/java-8-openjdk-amd64"}
+export APP_SUBMIT_TIME_ENV="1496761127980"
+export NM_HOST="10.0.0.5"
+export HADOOP_CLASSPATH="$PWD:job.jar/job.jar:job.jar/classes/:job.jar/lib/*:$PWD/*::/usr/hdp/current/hadoop-mapreduce-client/*:/usr/hdp/2.5.4.2-7/tez/*:/usr/hdp/2.5.4.2-7/tez/lib/*:/usr/hdp/2.5.4.2-7/tez/conf"
+export LD_LIBRARY_PATH="$PWD:$HADOOP_COMMON_HOME/lib/native"
+export LOGNAME="sadmin"
+export JVM_PID="$$"
+export PWD="/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/container_1496759089610_0002_01_000001"
+export LOCAL_DIRS="/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002"
+export APPLICATION_WEB_PROXY_BASE="/proxy/application_1496759089610_0002"
+export SHELL="/bin/bash"
+export NM_HTTP_PORT="30060"
+export LOG_DIRS="/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000001"
+export NM_AUX_SERVICE_mapreduce_shuffle="AAA0+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+"
+export NM_PORT="30050"
+export USER="sadmin"
+export HADOOP_YARN_HOME=${HADOOP_YARN_HOME:-"/usr/hdp/current/hadoop-yarn-nodemanager"}
+export CLASSPATH="$PWD:$PWD/mr-framework/hadoop/share/hadoop/mapreduce/*:$PWD/mr-framework/hadoop/share/hadoop/mapreduce/lib/*:$PWD/mr-framework/hadoop/share/hadoop/common/*:$PWD/mr-framework/hadoop/share/hadoop/common/lib/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/*:$PWD/mr-framework/hadoop/share/hadoop/yarn/lib/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/*:$PWD/mr-framework/hadoop/share/hadoop/hdfs/lib/*:$PWD/mr-framework/hadoop/share/hadoop/tools/lib/*:/usr/hdp/2.5.4.2-7/hadoop/lib/hadoop-lzo-0.6.0.2.5.4.2-7.jar:/etc/hadoop/conf/secure:job.jar/job.jar:job.jar/classes/:job.jar/lib/*:$PWD/*"
+export HADOOP_TOKEN_FILE_LOCATION="/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/container_1496759089610_0002_01_000001/container_tokens"
+export NM_AUX_SERVICE_spark_shuffle=""
+export LOCAL_USER_DIRS="/mnt/resource/hadoop/yarn/local/usercache/sadmin/"
+export HOME="/home/"
+export NM_AUX_SERVICE_spark2_shuffle=""
+export CONTAINER_ID="container_1496759089610_0002_01_000001"
+export MALLOC_ARENA_MAX="4"
+mkdir -p jobSubmitDir
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+ln -sf "/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/filecache/12/job.split" "jobSubmitDir/job.split"
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+ln -sf "/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/filecache/13/job.xml" "job.xml"
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+ln -sf "/mnt/resource/hadoop/yarn/local/filecache/10/mapreduce.tar.gz" "mr-framework"
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+mkdir -p jobSubmitDir
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+ln -sf "/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/filecache/10/job.splitmetainfo" "jobSubmitDir/job.splitmetainfo"
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+ln -sf "/mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/filecache/11/job.jar" "job.jar"
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+# Creating copy of launch script
+cp "launch_container.sh" "/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000001/launch_container.sh"
+chmod 640 "/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000001/launch_container.sh"
+# Determining directory contents
+echo "ls -l:" 1>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000001/directory.info"
+ls -l 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000001/directory.info"
+echo "find -L . -maxdepth 5 -ls:" 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000001/directory.info"
+find -L . -maxdepth 5 -ls 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000001/directory.info"
+echo "broken symlinks(find -L . -maxdepth 5 -type l -ls):" 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000001/directory.info"
+find -L . -maxdepth 5 -type l -ls 1>>"/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000001/directory.info"
+exec /bin/bash -c "$JAVA_HOME/bin/java -Djava.io.tmpdir=$PWD/tmp -Dlog4j.configuration=container-log4j.properties -Dyarn.app.container.log.dir=/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000001 -Dyarn.app.container.log.filesize=0 -Dhadoop.root.logger=INFO,CLA -Dhadoop.root.logfile=syslog -Dhdp.version=2.5.4.2-7 -Xmx512M -Xms512M -Djava.net.preferIPv4Stack=true -XX:NewRatio=8 -XX:+UseNUMA -XX:+UseParallelGC org.apache.hadoop.mapreduce.v2.app.MRAppMaster 1>/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000001/stdout 2>/mnt/resource/hadoop/yarn/log/application_1496759089610_0002/container_1496759089610_0002_01_000001/stderr "
+hadoop_shell_errorcode=$?
+if [ $hadoop_shell_errorcode -ne 0 ]
+then
+  exit $hadoop_shell_errorcode
+fi
+
+End of LogType:launch_container.sh
+
+LogType:stderr
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:1703
+Log Contents:
+Jun 06, 2017 2:59:12 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.mapreduce.v2.app.webapp.JAXBContextResolver as a provider class
+Jun 06, 2017 2:59:12 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.yarn.webapp.GenericExceptionHandler as a provider class
+Jun 06, 2017 2:59:12 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory register
+INFO: Registering org.apache.hadoop.mapreduce.v2.app.webapp.AMWebServices as a root resource class
+Jun 06, 2017 2:59:12 PM com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.9 09/02/2011 11:17 AM'
+Jun 06, 2017 2:59:12 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.mapreduce.v2.app.webapp.JAXBContextResolver to GuiceManagedComponentProvider with the scope "Singleton"
+Jun 06, 2017 2:59:13 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.yarn.webapp.GenericExceptionHandler to GuiceManagedComponentProvider with the scope "Singleton"
+Jun 06, 2017 2:59:13 PM com.sun.jersey.guice.spi.container.GuiceComponentProviderFactory getComponentProvider
+INFO: Binding org.apache.hadoop.mapreduce.v2.app.webapp.AMWebServices to GuiceManagedComponentProvider with the scope "PerRequest"
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.ipc.Server).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+
+End of LogType:stderr
+
+LogType:stdout
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:0
+Log Contents:
+
+End of LogType:stdout
+
+LogType:syslog
+Log Upload Time:Tue Jun 06 14:59:59 +0000 2017
+LogLength:37654
+Log Contents:
+2017-06-06 14:59:07,855 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Created MRAppMaster for application appattempt_1496759089610_0002_000001
+2017-06-06 14:59:08,327 WARN [main] org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-06-06 14:59:08,378 INFO [main] org.apache.hadoop.security.SecurityUtil: Updating Configuration
+2017-06-06 14:59:08,397 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Executing with tokens:
+2017-06-06 14:59:08,397 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Kind: YARN_AM_RM_TOKEN, Service: , Ident: (appAttemptId { application_id { id: 2 cluster_timestamp: 1496759089610 } attemptId: 1 } keyId: 826613029)
+2017-06-06 14:59:08,885 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Using mapred newApiCommitter.
+2017-06-06 14:59:08,887 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter set in config null
+2017-06-06 14:59:08,976 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2017-06-06 14:59:08,976 INFO [main] org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2017-06-06 14:59:09,298 WARN [main] org.apache.hadoop.metrics2.impl.MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-azure-file-system.properties,hadoop-metrics2.properties
+2017-06-06 14:59:09,425 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-06-06 14:59:09,425 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: azure-file-system metrics system started
+2017-06-06 14:59:09,551 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2017-06-06 14:59:10,039 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.jobhistory.EventType for class org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler
+2017-06-06 14:59:10,041 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.JobEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$JobEventDispatcher
+2017-06-06 14:59:10,041 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskEventDispatcher
+2017-06-06 14:59:10,044 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.TaskAttemptEventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$TaskAttemptEventDispatcher
+2017-06-06 14:59:10,044 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventType for class org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler
+2017-06-06 14:59:10,046 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.speculate.Speculator$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$SpeculatorEventDispatcher
+2017-06-06 14:59:10,047 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.rm.ContainerAllocator$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerAllocatorRouter
+2017-06-06 14:59:10,049 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncher$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerLauncherRouter
+2017-06-06 14:59:10,136 INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system is set solely by core-default.xml therefore -  ignoring
+2017-06-06 14:59:10,183 INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system is set solely by core-default.xml therefore -  ignoring
+2017-06-06 14:59:10,251 INFO [main] org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system is set solely by core-default.xml therefore -  ignoring
+2017-06-06 14:59:10,568 INFO [main] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Perms after creating 488, Expected: 504
+2017-06-06 14:59:10,568 INFO [main] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Explicitly setting permissions to : 504, rwxrwx---
+2017-06-06 14:59:10,597 INFO [main] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Emitting job history data to the timeline server is not enabled
+2017-06-06 14:59:10,759 INFO [main] org.apache.hadoop.yarn.event.AsyncDispatcher: Registering class org.apache.hadoop.mapreduce.v2.app.job.event.JobFinishEvent$Type for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$JobFinishEventHandler
+2017-06-06 14:59:10,829 WARN [main] org.apache.hadoop.metrics2.impl.MetricsConfig: Cannot locate configuration: tried hadoop-metrics2-mrappmaster.properties,hadoop-metrics2.properties
+2017-06-06 14:59:10,836 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-06-06 14:59:10,837 INFO [main] org.apache.hadoop.metrics2.impl.MetricsSystemImpl: MRAppMaster metrics system started
+2017-06-06 14:59:10,847 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Adding job token for job_1496759089610_0002 to jobTokenSecretManager
+2017-06-06 14:59:11,013 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Not uberizing job_1496759089610_0002 because: not enabled; too much RAM;
+2017-06-06 14:59:11,040 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Input size for job job_1496759089610_0002 = 1395667. Number of splits = 1
+2017-06-06 14:59:11,042 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Number of reduces for job job_1496759089610_0002 = 1
+2017-06-06 14:59:11,042 INFO [main] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1496759089610_0002Job Transitioned from NEW to INITED
+2017-06-06 14:59:11,044 INFO [main] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: MRAppMaster launching normal, non-uberized, multi-container job job_1496759089610_0002.
+2017-06-06 14:59:11,111 INFO [main] org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler
+2017-06-06 14:59:11,143 INFO [Socket Reader #1 for port 40638] org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 40638
+2017-06-06 14:59:11,186 INFO [main] org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.mapreduce.v2.api.MRClientProtocolPB to the server
+2017-06-06 14:59:11,187 INFO [IPC Server Responder] org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2017-06-06 14:59:11,188 INFO [IPC Server listener on 40638] org.apache.hadoop.ipc.Server: IPC Server listener on 40638: starting
+2017-06-06 14:59:11,196 INFO [main] org.apache.hadoop.mapreduce.v2.app.client.MRClientService: Instantiated MRClientService at /10.0.0.5:40638
+2017-06-06 14:59:11,347 INFO [main] org.mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017-06-06 14:59:11,369 INFO [main] org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2017-06-06 14:59:11,377 INFO [main] org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.mapreduce is not defined
+2017-06-06 14:59:11,386 INFO [main] org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2017-06-06 14:59:11,463 INFO [main] org.apache.hadoop.http.HttpServer2: Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context mapreduce
+2017-06-06 14:59:11,463 INFO [main] org.apache.hadoop.http.HttpServer2: Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context static
+2017-06-06 14:59:11,468 INFO [main] org.apache.hadoop.http.HttpServer2: adding path spec: /mapreduce/*
+2017-06-06 14:59:11,469 INFO [main] org.apache.hadoop.http.HttpServer2: adding path spec: /ws/*
+2017-06-06 14:59:11,925 INFO [main] org.apache.hadoop.yarn.webapp.WebApps: Registered webapp guice modules
+2017-06-06 14:59:11,930 INFO [main] org.apache.hadoop.http.HttpServer2: Jetty bound to port 37597
+2017-06-06 14:59:11,930 INFO [main] org.mortbay.log: jetty-6.1.26.hwx
+2017-06-06 14:59:11,967 INFO [main] org.mortbay.log: Extract jar:file:/mnt/resource/hadoop/yarn/local/filecache/10/mapreduce.tar.gz/hadoop/share/hadoop/yarn/hadoop-yarn-common-2.7.3.2.5.4.2-7.jar!/webapps/mapreduce to /mnt/resource/hadoop/yarn/local/usercache/sadmin/appcache/application_1496759089610_0002/container_1496759089610_0002_01_000001/tmp/Jetty_0_0_0_0_37597_mapreduce____.aw8oie/webapp
+2017-06-06 14:59:13,664 INFO [main] org.mortbay.log: Started HttpServer2$SelectChannelConnectorWithSafeStartup@0.0.0.0:37597
+2017-06-06 14:59:13,665 INFO [main] org.apache.hadoop.yarn.webapp.WebApps: Web app mapreduce started at 37597
+2017-06-06 14:59:13,673 INFO [main] org.apache.hadoop.ipc.CallQueueManager: Using callQueue: class java.util.concurrent.LinkedBlockingQueue scheduler: class org.apache.hadoop.ipc.DefaultRpcScheduler
+2017-06-06 14:59:13,674 INFO [Socket Reader #1 for port 35128] org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 35128
+2017-06-06 14:59:13,687 INFO [IPC Server Responder] org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2017-06-06 14:59:13,687 INFO [IPC Server listener on 35128] org.apache.hadoop.ipc.Server: IPC Server listener on 35128: starting
+2017-06-06 14:59:13,731 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: nodeBlacklistingEnabled:true
+2017-06-06 14:59:13,731 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: maxTaskFailuresPerNode is 3
+2017-06-06 14:59:13,731 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: blacklistDisablePercent is 33
+2017-06-06 14:59:13,991 INFO [main] org.apache.hadoop.yarn.client.ConfiguredRMFailoverProxyProvider: Failing over to rm2
+2017-06-06 14:59:14,106 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMCommunicator: maxContainerCapability: <memory:12288, vCores:8>
+2017-06-06 14:59:14,106 INFO [main] org.apache.hadoop.mapreduce.v2.app.rm.RMCommunicator: queue: default
+2017-06-06 14:59:14,112 INFO [main] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Upper limit on the thread pool size is 500
+2017-06-06 14:59:14,113 INFO [main] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: The thread pool initial size is 10
+2017-06-06 14:59:14,116 INFO [main] org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: yarn.client.max-cached-nodemanagers-proxies : 0
+2017-06-06 14:59:14,126 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1496759089610_0002Job Transitioned from INITED to SETUP
+2017-06-06 14:59:14,128 INFO [CommitterEvent Processor #0] org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler: Processing the event EventType: JOB_SETUP
+2017-06-06 14:59:14,259 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1496759089610_0002Job Transitioned from SETUP to RUNNING
+2017-06-06 14:59:14,342 INFO [AsyncDispatcher event handler] org.apache.hadoop.yarn.util.RackResolver: Resolved localhost to /default-rack
+2017-06-06 14:59:14,350 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1496759089610_0002_m_000000 Task Transitioned from NEW to SCHEDULED
+2017-06-06 14:59:14,353 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1496759089610_0002_r_000000 Task Transitioned from NEW to SCHEDULED
+2017-06-06 14:59:14,355 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Event Writer setup for JobId: job_1496759089610_0002, File: wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/mapreducestaging/sadmin/.staging/job_1496759089610_0002/job_1496759089610_0002_1.jhist
+2017-06-06 14:59:14,356 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1496759089610_0002_m_000000_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2017-06-06 14:59:14,356 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1496759089610_0002_r_000000_0 TaskAttempt Transitioned from NEW to UNASSIGNED
+2017-06-06 14:59:14,360 INFO [Thread-55] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: mapResourceRequest:<memory:768, vCores:1>
+2017-06-06 14:59:14,373 INFO [Thread-55] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: reduceResourceRequest:<memory:1536, vCores:1>
+2017-06-06 14:59:15,105 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Before Scheduling: PendingReds:1 ScheduledMaps:1 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:0 ContRel:0 HostLocal:0 RackLocal:0
+2017-06-06 14:59:15,343 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1496759089610_0002: ask=3 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:23040, vCores:1> knownNMs=2
+2017-06-06 14:59:15,345 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:23040, vCores:1>
+2017-06-06 14:59:15,375 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2017-06-06 14:59:16,423 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Got allocated containers 1
+2017-06-06 14:59:16,456 INFO [RMCommunicator Allocator] org.apache.hadoop.yarn.util.RackResolver: Resolved 10.0.0.4 to /default-rack
+2017-06-06 14:59:16,460 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1496759089610_0002_01_000002 to attempt_1496759089610_0002_m_000000_0
+2017-06-06 14:59:16,463 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:22272, vCores:1>
+2017-06-06 14:59:16,463 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold not met. completedMapsForReduceSlowstart 1
+2017-06-06 14:59:16,463 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:1 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:1 AssignedReds:0 CompletedMaps:0 CompletedReds:0 ContAlloc:1 ContRel:0 HostLocal:0 RackLocal:1
+2017-06-06 14:59:16,550 INFO [AsyncDispatcher event handler] org.apache.hadoop.yarn.util.RackResolver: Resolved 10.0.0.4 to /default-rack
+2017-06-06 14:59:16,668 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: The job-jar file on the remote FS is wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/mapreducestaging/sadmin/.staging/job_1496759089610_0002/job.jar
+2017-06-06 14:59:16,727 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: The job-conf file on the remote FS is /mapreducestaging/sadmin/.staging/job_1496759089610_0002/job.xml
+2017-06-06 14:59:16,747 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Adding #0 tokens and #1 secret keys for NM use for launching container
+2017-06-06 14:59:16,747 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Size of containertokens_dob is 1
+2017-06-06 14:59:16,747 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Putting shuffle token in serviceData
+2017-06-06 14:59:16,790 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1496759089610_0002_m_000000_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2017-06-06 14:59:16,804 INFO [ContainerLauncher #0] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1496759089610_0002_01_000002 taskAttempt attempt_1496759089610_0002_m_000000_0
+2017-06-06 14:59:16,809 INFO [ContainerLauncher #0] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1496759089610_0002_m_000000_0
+2017-06-06 14:59:16,814 INFO [ContainerLauncher #0] org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : 10.0.0.4:30050
+2017-06-06 14:59:16,998 INFO [ContainerLauncher #0] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Shuffle port returned by ContainerManager for attempt_1496759089610_0002_m_000000_0 : 13562
+2017-06-06 14:59:17,006 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1496759089610_0002_m_000000_0] using containerId: [container_1496759089610_0002_01_000002 on NM: [10.0.0.4:30050]
+2017-06-06 14:59:17,010 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1496759089610_0002_m_000000_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+2017-06-06 14:59:17,011 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1496759089610_0002_m_000000 Task Transitioned from SCHEDULED to RUNNING
+2017-06-06 14:59:17,472 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1496759089610_0002: ask=3 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:22272, vCores:1> knownNMs=2
+2017-06-06 14:59:34,946 INFO [Socket Reader #1 for port 35128] SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for job_1496759089610_0002 (auth:SIMPLE)
+2017-06-06 14:59:34,982 INFO [IPC Server handler 0 on 35128] org.apache.hadoop.mapred.TaskAttemptListenerImpl: JVM with ID : jvm_1496759089610_0002_m_000002 asked for a task
+2017-06-06 14:59:34,985 INFO [IPC Server handler 0 on 35128] org.apache.hadoop.mapred.TaskAttemptListenerImpl: JVM with ID: jvm_1496759089610_0002_m_000002 given task: attempt_1496759089610_0002_m_000000_0
+2017-06-06 14:59:39,335 INFO [IPC Server handler 5 on 35128] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Progress of TaskAttempt attempt_1496759089610_0002_m_000000_0 is : 0.0
+2017-06-06 14:59:40,414 INFO [IPC Server handler 1 on 35128] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Progress of TaskAttempt attempt_1496759089610_0002_m_000000_0 is : 1.0
+2017-06-06 14:59:40,429 INFO [IPC Server handler 3 on 35128] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Done acknowledgement from attempt_1496759089610_0002_m_000000_0
+2017-06-06 14:59:40,432 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1496759089610_0002_m_000000_0 TaskAttempt Transitioned from RUNNING to SUCCESS_CONTAINER_CLEANUP
+2017-06-06 14:59:40,433 INFO [ContainerLauncher #1] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container container_1496759089610_0002_01_000002 taskAttempt attempt_1496759089610_0002_m_000000_0
+2017-06-06 14:59:40,434 INFO [ContainerLauncher #1] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: KILLING attempt_1496759089610_0002_m_000000_0
+2017-06-06 14:59:40,435 INFO [ContainerLauncher #1] org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : 10.0.0.4:30050
+2017-06-06 14:59:40,478 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1496759089610_0002_m_000000_0 TaskAttempt Transitioned from SUCCESS_CONTAINER_CLEANUP to SUCCEEDED
+2017-06-06 14:59:40,490 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: Task succeeded with attempt attempt_1496759089610_0002_m_000000_0
+2017-06-06 14:59:40,492 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1496759089610_0002_m_000000 Task Transitioned from RUNNING to SUCCEEDED
+2017-06-06 14:59:40,494 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Num completed Tasks: 1
+2017-06-06 14:59:40,577 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Before Scheduling: PendingReds:1 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:1 AssignedReds:0 CompletedMaps:1 CompletedReds:0 ContAlloc:1 ContRel:0 HostLocal:0 RackLocal:1
+2017-06-06 14:59:40,591 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1496759089610_0002_01_000002
+2017-06-06 14:59:40,592 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Recalculating schedule, headroom=<memory:23040, vCores:1>
+2017-06-06 14:59:40,592 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Reduce slow start threshold reached. Scheduling reduces.
+2017-06-06 14:59:40,592 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: All maps assigned. Ramping up all remaining reduces:1
+2017-06-06 14:59:40,593 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:1 AssignedMaps:0 AssignedReds:0 CompletedMaps:1 CompletedReds:0 ContAlloc:1 ContRel:0 HostLocal:0 RackLocal:1
+2017-06-06 14:59:40,593 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1496759089610_0002_m_000000_0: Container killed by the ApplicationMaster.
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+2017-06-06 14:59:41,603 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1496759089610_0002: ask=1 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:23040, vCores:1> knownNMs=2
+2017-06-06 14:59:42,615 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Got allocated containers 1
+2017-06-06 14:59:42,616 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned to reduce
+2017-06-06 14:59:42,616 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Assigned container container_1496759089610_0002_01_000003 to attempt_1496759089610_0002_r_000000_0
+2017-06-06 14:59:42,617 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:1 CompletedMaps:1 CompletedReds:0 ContAlloc:2 ContRel:0 HostLocal:0 RackLocal:1
+2017-06-06 14:59:42,662 INFO [AsyncDispatcher event handler] org.apache.hadoop.yarn.util.RackResolver: Resolved 10.0.0.5 to /default-rack
+2017-06-06 14:59:42,663 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1496759089610_0002_r_000000_0 TaskAttempt Transitioned from UNASSIGNED to ASSIGNED
+2017-06-06 14:59:42,664 INFO [ContainerLauncher #2] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1496759089610_0002_01_000003 taskAttempt attempt_1496759089610_0002_r_000000_0
+2017-06-06 14:59:42,664 INFO [ContainerLauncher #2] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Launching attempt_1496759089610_0002_r_000000_0
+2017-06-06 14:59:42,664 INFO [ContainerLauncher #2] org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : 10.0.0.5:30050
+2017-06-06 14:59:42,726 INFO [ContainerLauncher #2] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Shuffle port returned by ContainerManager for attempt_1496759089610_0002_r_000000_0 : 13562
+2017-06-06 14:59:42,732 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: TaskAttempt: [attempt_1496759089610_0002_r_000000_0] using containerId: [container_1496759089610_0002_01_000003 on NM: [10.0.0.5:30050]
+2017-06-06 14:59:42,734 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1496759089610_0002_r_000000_0 TaskAttempt Transitioned from ASSIGNED to RUNNING
+2017-06-06 14:59:42,737 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1496759089610_0002_r_000000 Task Transitioned from SCHEDULED to RUNNING
+2017-06-06 14:59:43,624 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerRequestor: getResources() for application_1496759089610_0002: ask=1 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:21504, vCores:1> knownNMs=2
+2017-06-06 14:59:45,915 INFO [Socket Reader #1 for port 35128] SecurityLogger.org.apache.hadoop.ipc.Server: Auth successful for job_1496759089610_0002 (auth:SIMPLE)
+2017-06-06 14:59:45,954 INFO [IPC Server handler 0 on 35128] org.apache.hadoop.mapred.TaskAttemptListenerImpl: JVM with ID : jvm_1496759089610_0002_r_000003 asked for a task
+2017-06-06 14:59:45,955 INFO [IPC Server handler 0 on 35128] org.apache.hadoop.mapred.TaskAttemptListenerImpl: JVM with ID: jvm_1496759089610_0002_r_000003 given task: attempt_1496759089610_0002_r_000000_0
+2017-06-06 14:59:47,191 INFO [IPC Server handler 5 on 35128] org.apache.hadoop.mapred.TaskAttemptListenerImpl: MapCompletionEvents request from attempt_1496759089610_0002_r_000000_0. startIndex 0 maxEvents 10000
+2017-06-06 14:59:47,545 INFO [IPC Server handler 8 on 35128] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Progress of TaskAttempt attempt_1496759089610_0002_r_000000_0 is : 0.0
+2017-06-06 14:59:47,666 INFO [IPC Server handler 16 on 35128] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Progress of TaskAttempt attempt_1496759089610_0002_r_000000_0 is : 0.0
+2017-06-06 14:59:48,781 INFO [IPC Server handler 0 on 35128] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Commit-pending state update from attempt_1496759089610_0002_r_000000_0
+2017-06-06 14:59:48,788 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1496759089610_0002_r_000000_0 TaskAttempt Transitioned from RUNNING to COMMIT_PENDING
+2017-06-06 14:59:48,788 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: attempt_1496759089610_0002_r_000000_0 given a go for committing the task output.
+2017-06-06 14:59:48,789 INFO [IPC Server handler 5 on 35128] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Commit go/no-go request from attempt_1496759089610_0002_r_000000_0
+2017-06-06 14:59:48,789 INFO [IPC Server handler 5 on 35128] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: Result of canCommit for attempt_1496759089610_0002_r_000000_0:true
+2017-06-06 14:59:49,068 INFO [IPC Server handler 1 on 35128] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Progress of TaskAttempt attempt_1496759089610_0002_r_000000_0 is : 1.0
+2017-06-06 14:59:49,079 INFO [IPC Server handler 3 on 35128] org.apache.hadoop.mapred.TaskAttemptListenerImpl: Done acknowledgement from attempt_1496759089610_0002_r_000000_0
+2017-06-06 14:59:49,083 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1496759089610_0002_r_000000_0 TaskAttempt Transitioned from COMMIT_PENDING to SUCCESS_CONTAINER_CLEANUP
+2017-06-06 14:59:49,084 INFO [ContainerLauncher #3] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container container_1496759089610_0002_01_000003 taskAttempt attempt_1496759089610_0002_r_000000_0
+2017-06-06 14:59:49,085 INFO [ContainerLauncher #3] org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncherImpl: KILLING attempt_1496759089610_0002_r_000000_0
+2017-06-06 14:59:49,085 INFO [ContainerLauncher #3] org.apache.hadoop.yarn.client.api.impl.ContainerManagementProtocolProxy: Opening proxy : 10.0.0.5:30050
+2017-06-06 14:59:49,250 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: attempt_1496759089610_0002_r_000000_0 TaskAttempt Transitioned from SUCCESS_CONTAINER_CLEANUP to SUCCEEDED
+2017-06-06 14:59:49,250 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: Task succeeded with attempt attempt_1496759089610_0002_r_000000_0
+2017-06-06 14:59:49,250 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskImpl: task_1496759089610_0002_r_000000 Task Transitioned from RUNNING to SUCCEEDED
+2017-06-06 14:59:49,251 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Num completed Tasks: 2
+2017-06-06 14:59:49,251 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1496759089610_0002Job Transitioned from RUNNING to COMMITTING
+2017-06-06 14:59:49,253 INFO [CommitterEvent Processor #1] org.apache.hadoop.mapreduce.v2.app.commit.CommitterEventHandler: Processing the event EventType: JOB_COMMIT
+2017-06-06 14:59:49,392 WARN [CommitterEvent Processor #1] org.apache.hadoop.fs.azure.AzureFileSystemThreadPoolExecutor: Disabling threads for Delete operation as thread count 0 is <= 1
+2017-06-06 14:59:49,453 INFO [CommitterEvent Processor #1] org.apache.hadoop.fs.azure.AzureFileSystemThreadPoolExecutor: Time taken for Delete operation is: 61 ms with threads: 0
+2017-06-06 14:59:49,649 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Before Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:1 CompletedMaps:1 CompletedReds:1 ContAlloc:2 ContRel:0 HostLocal:0 RackLocal:1
+2017-06-06 14:59:49,654 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Received completed container container_1496759089610_0002_01_000003
+2017-06-06 14:59:49,655 INFO [RMCommunicator Allocator] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: After Scheduling: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:1 CompletedReds:1 ContAlloc:2 ContRel:0 HostLocal:0 RackLocal:1
+2017-06-06 14:59:49,655 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.TaskAttemptImpl: Diagnostics report from attempt_1496759089610_0002_r_000000_0: Container killed by the ApplicationMaster.
+Container killed on request. Exit code is 143
+Container exited with a non-zero exit code 143
+
+2017-06-06 14:59:49,705 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: Calling handler for JobFinishedEvent 
+2017-06-06 14:59:49,706 INFO [AsyncDispatcher event handler] org.apache.hadoop.mapreduce.v2.app.job.impl.JobImpl: job_1496759089610_0002Job Transitioned from COMMITTING to SUCCEEDED
+2017-06-06 14:59:49,708 INFO [Thread-68] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: We are finishing cleanly so this is the last retry
+2017-06-06 14:59:49,708 INFO [Thread-68] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Notify RMCommunicator isAMLastRetry: true
+2017-06-06 14:59:49,708 INFO [Thread-68] org.apache.hadoop.mapreduce.v2.app.rm.RMCommunicator: RMCommunicator notified that shouldUnregistered is: true
+2017-06-06 14:59:49,708 INFO [Thread-68] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Notify JHEH isAMLastRetry: true
+2017-06-06 14:59:49,708 INFO [Thread-68] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: JobHistoryEventHandler notified that forceJobCompletion is true
+2017-06-06 14:59:49,708 INFO [Thread-68] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Calling stop for all the services
+2017-06-06 14:59:49,709 INFO [Thread-68] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Stopping JobHistoryEventHandler. Size of the outstanding queue size is 0
+2017-06-06 14:59:49,953 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Copying wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/mapreducestaging/sadmin/.staging/job_1496759089610_0002/job_1496759089610_0002_1.jhist to wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/mr-history/tmp/sadmin/job_1496759089610_0002-1496761127980-sadmin-word+count-1496761189701-1-1-SUCCEEDED-default-1496761154120.jhist_tmp
+2017-06-06 14:59:50,245 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Copied to done location: wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/mr-history/tmp/sadmin/job_1496759089610_0002-1496761127980-sadmin-word+count-1496761189701-1-1-SUCCEEDED-default-1496761154120.jhist_tmp
+2017-06-06 14:59:50,318 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Copying wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/mapreducestaging/sadmin/.staging/job_1496759089610_0002/job_1496759089610_0002_1_conf.xml to wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/mr-history/tmp/sadmin/job_1496759089610_0002_conf.xml_tmp
+2017-06-06 14:59:50,684 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Copied to done location: wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/mr-history/tmp/sadmin/job_1496759089610_0002_conf.xml_tmp
+2017-06-06 14:59:50,846 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Moved tmp to done: wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/mr-history/tmp/sadmin/job_1496759089610_0002.summary_tmp to wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/mr-history/tmp/sadmin/job_1496759089610_0002.summary
+2017-06-06 14:59:51,002 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Moved tmp to done: wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/mr-history/tmp/sadmin/job_1496759089610_0002_conf.xml_tmp to wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/mr-history/tmp/sadmin/job_1496759089610_0002_conf.xml
+2017-06-06 14:59:51,151 INFO [eventHandlingThread] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Moved tmp to done: wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/mr-history/tmp/sadmin/job_1496759089610_0002-1496761127980-sadmin-word+count-1496761189701-1-1-SUCCEEDED-default-1496761154120.jhist_tmp to wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net/mr-history/tmp/sadmin/job_1496759089610_0002-1496761127980-sadmin-word+count-1496761189701-1-1-SUCCEEDED-default-1496761154120.jhist
+2017-06-06 14:59:51,177 INFO [Thread-68] org.apache.hadoop.mapreduce.jobhistory.JobHistoryEventHandler: Stopped JobHistoryEventHandler. super.stop()
+2017-06-06 14:59:51,185 INFO [Thread-68] org.apache.hadoop.mapreduce.v2.app.rm.RMCommunicator: Setting job diagnostics to 
+2017-06-06 14:59:51,188 INFO [Thread-68] org.apache.hadoop.mapreduce.v2.app.rm.RMCommunicator: History url is http://headnodehost:19888/jobhistory/job/job_1496759089610_0002
+2017-06-06 14:59:51,209 INFO [Thread-68] org.apache.hadoop.mapreduce.v2.app.rm.RMCommunicator: Waiting for application to be successfully unregistered.
+2017-06-06 14:59:52,216 INFO [Thread-68] org.apache.hadoop.mapreduce.v2.app.rm.RMContainerAllocator: Final Stats: PendingReds:0 ScheduledMaps:0 ScheduledReds:0 AssignedMaps:0 AssignedReds:0 CompletedMaps:1 CompletedReds:1 ContAlloc:2 ContRel:0 HostLocal:0 RackLocal:1
+2017-06-06 14:59:52,219 INFO [Thread-68] org.apache.hadoop.mapreduce.v2.app.MRAppMaster: Deleting staging directory wasb://davidmod05cluster-ctr@mod05sa.blob.core.windows.net /mapreducestaging/sadmin/.staging/job_1496759089610_0002
+2017-06-06 14:59:52,505 WARN [Thread-68] org.apache.hadoop.fs.azure.AzureFileSystemThreadPoolExecutor: Disabling threads for Delete operation as thread count 0 is <= 1
+2017-06-06 14:59:52,663 INFO [Thread-68] org.apache.hadoop.fs.azure.AzureFileSystemThreadPoolExecutor: Time taken for Delete operation is: 158 ms with threads: 0
+2017-06-06 14:59:52,709 INFO [Thread-68] org.apache.hadoop.ipc.Server: Stopping server on 35128
+2017-06-06 14:59:52,710 INFO [IPC Server listener on 35128] org.apache.hadoop.ipc.Server: Stopping IPC Server listener on 35128
+2017-06-06 14:59:52,717 INFO [TaskHeartbeatHandler PingChecker] org.apache.hadoop.mapreduce.v2.app.TaskHeartbeatHandler: TaskHeartbeatHandler thread interrupted
+2017-06-06 14:59:52,717 INFO [IPC Server Responder] org.apache.hadoop.ipc.Server: Stopping IPC Server Responder
+
+End of LogType:syslog
+

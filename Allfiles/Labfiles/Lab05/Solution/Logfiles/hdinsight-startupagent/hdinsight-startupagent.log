@@ -1,0 +1,107 @@
+2017-06-06 14:20:34,095 - HdinsightStartupAgent.py [3092] root - INFO - Started StartupAgent execution : 2017-06-06 14:20:34 
+2017-06-06 14:20:34,096 - HdinsightStartupAgent.py [3092] root - INFO - Verifying folder : /var/lib/hdinsight-startupagent/
+2017-06-06 14:20:34,096 - HdinsightStartupAgent.py [3092] root - INFO - Folder not found. Creating a new folder /var/lib/hdinsight-startupagent/
+2017-06-06 14:20:34,096 - HdinsightStartupAgent.py [3092] root - INFO - Checking for completion with success
+2017-06-06 14:20:34,096 - HdinsightStartupAgent.py [3092] root - INFO - Completion file not found
+2017-06-06 14:20:34,097 - HdinsightStartupAgent.py [3092] root - INFO - Checking for completion with failure
+2017-06-06 14:20:34,097 - HdinsightStartupAgent.py [3092] root - INFO - Completion error file not found
+2017-06-06 14:20:34,097 - HdinsightStartupAgent.py [3092] root - INFO - Getting startupagent document location
+2017-06-06 14:20:34,097 - HdinsightStartupAgent.py [3092] root - INFO - Getting startup agent document location...
+2017-06-06 14:20:34,097 - HdinsightStartupAgent.py [3092] root - INFO - Role environment exists. Getting document location from role environment.
+2017-06-06 14:20:34,097 - RoleEnv.py [3092] hdinsight_role_env.RoleEnv - DEBUG - Initialized role environment.
+2017-06-06 14:20:34,100 - HdinsightStartupAgent.py [3092] root - INFO - startup agent document location: https://hdistore8360c904554633.blob.core.windows.net/3504ab5e3a5e72486dbce3ac883431219edeployment/StartupAgentDocumentheadnode.json?sv=2015-04-05&sr=b&sig=MjpXeX1Pqbp8eQXaTkuTG0x%2Fb6jKgSnYzyREFXLkzuk%3D&se=2117-06-06T14%3A05%3A56Z&sp=r
+2017-06-06 14:20:34,108 - HdinsightStartupAgent.py [3092] root - INFO - Successfully retrieved startupagent document location
+2017-06-06 14:20:34,109 - HdinsightStartupAgent.py [3092] root - INFO - Starting to downlaod startupagent document
+2017-06-06 14:20:34,109 - HdinsightStartupAgent.py [3092] root - INFO - Starting downloading of Startup Agent Document
+2017-06-06 14:20:34,109 - HdinsightStartupAgent.py [3092] root - INFO - Verifying folder : /var/lib/hdinsight-startupagent/
+2017-06-06 14:20:34,109 - HdinsightStartupAgent.py [3092] root - INFO - Downloading StartupAgent Document to : /var/lib/hdinsight-startupagent/startupagent_document.json
+2017-06-06 14:20:34,150 - HdinsightStartupAgent.py [3092] root - INFO - StartupAgent Document download successful
+2017-06-06 14:20:34,150 - HdinsightStartupAgent.py [3092] root - INFO - Succesully downloaded startupagent document
+2017-06-06 14:20:34,150 - HdinsightStartupAgent.py [3092] root - INFO - Starting Parsing startupagent document
+2017-06-06 14:20:34,150 - HdinsightStartupAgent.py [3092] root - INFO - Starting parsing of startup agent document
+2017-06-06 14:20:34,151 - HdinsightStartupAgent.py [3092] root - INFO - StarutpAgent document parsed successfully
+2017-06-06 14:20:34,151 - HdinsightStartupAgent.py [3092] root - INFO - Successfully parsed startupagent document
+2017-06-06 14:20:34,151 - HdinsightStartupAgent.py [3092] root - INFO - Starting to handle cluster component installation
+2017-06-06 14:20:34,151 - HdinsightStartupAgent.py [3092] root - INFO - Verifying folder : /var/lib/hdinsight-startupagent/
+2017-06-06 14:20:34,151 - HdinsightStartupAgent.py [3092] root - INFO - Started downloading of Cluster Components
+2017-06-06 14:20:34,152 - HdinsightStartupAgent.py [3092] root - INFO - Verifying folder : /var/lib/hdinsight-startupagent/8626
+2017-06-06 14:20:34,152 - HdinsightStartupAgent.py [3092] root - INFO - Folder not found. Creating a new folder /var/lib/hdinsight-startupagent/8626
+2017-06-06 14:20:34,152 - HdinsightStartupAgent.py [3092] root - INFO - Checking status of Package : hdinsight-probes
+2017-06-06 14:20:34,200 - HdinsightStartupAgent.py [3092] root - INFO - Package: hdinsight-probes
+Status: install ok installed
+Priority: extra
+Section: universe/admin
+Installed-Size: 1020
+Maintainer: Microsoft
+Architecture: all
+Version: 1.0.90319
+Depends: python (>= 2.7), python (<< 2.8), python-pip, sudo
+Description: HdInsight Probes
+
+2017-06-06 14:20:34,201 - HdinsightStartupAgent.py [3092] root - INFO - hdinsight-probes Package already installed
+2017-06-06 14:20:34,201 - HdinsightStartupAgent.py [3092] root - INFO - Retrieving Package Version
+2017-06-06 14:20:34,204 - HdinsightStartupAgent.py [3092] root - INFO - Comparing Installed and Startupagent Document Version
+2017-06-06 14:20:34,204 - HdinsightStartupAgent.py [3092] root - INFO - Installed Version : 1.0.90319 Startupagent Version : 1.0.31659
+2017-06-06 14:20:34,204 - HdinsightStartupAgent.py [3092] root - INFO - Latest version already installed on the image
+2017-06-06 14:20:34,204 - HdinsightStartupAgent.py [3092] root - INFO - Checking status of Package : hdinsight-agent
+2017-06-06 14:20:34,255 - HdinsightStartupAgent.py [3092] root - INFO - Package: hdinsight-agent
+Status: install ok installed
+Priority: extra
+Section: universe/admin
+Installed-Size: 274
+Maintainer: Microsoft
+Architecture: all
+Version: 1.0.106188
+Depends: python (>= 2.7), python (<< 2.8), python-pip, sudo
+Description: HdInsight Agent
+
+2017-06-06 14:20:34,255 - HdinsightStartupAgent.py [3092] root - INFO - hdinsight-agent Package already installed
+2017-06-06 14:20:34,255 - HdinsightStartupAgent.py [3092] root - INFO - Retrieving Package Version
+2017-06-06 14:20:34,257 - HdinsightStartupAgent.py [3092] root - INFO - Comparing Installed and Startupagent Document Version
+2017-06-06 14:20:34,257 - HdinsightStartupAgent.py [3092] root - INFO - Installed Version : 1.0.106188 Startupagent Version : 0.0.0
+2017-06-06 14:20:34,258 - HdinsightStartupAgent.py [3092] root - INFO - Latest version already installed on the image
+2017-06-06 14:20:34,258 - HdinsightStartupAgent.py [3092] root - INFO - Identified HdInsight Agent component. Getting Cluster manifest location from component arguments
+2017-06-06 14:20:34,258 - HdinsightStartupAgent.py [3092] root - INFO - Cluster manifest location retrieved from HdInsight Agent component successfully
+2017-06-06 14:20:34,258 - HdinsightStartupAgent.py [3092] root - INFO - Checking status of Package : hdinsight-patchingagent
+2017-06-06 14:20:34,308 - HdinsightStartupAgent.py [3092] root - INFO - Package: hdinsight-patchingagent
+Status: install ok installed
+Priority: extra
+Section: universe/admin
+Installed-Size: 3339
+Maintainer: Microsoft
+Architecture: all
+Version: 1.0.34056
+Description: Hdinsight Patchingagent that handles patching activity on the VM
+
+2017-06-06 14:20:34,308 - HdinsightStartupAgent.py [3092] root - INFO - hdinsight-patchingagent Package already installed
+2017-06-06 14:20:34,308 - HdinsightStartupAgent.py [3092] root - INFO - Retrieving Package Version
+2017-06-06 14:20:34,310 - HdinsightStartupAgent.py [3092] root - INFO - Comparing Installed and Startupagent Document Version
+2017-06-06 14:20:34,310 - HdinsightStartupAgent.py [3092] root - INFO - Installed Version : 1.0.34056 Startupagent Version : 0.0.0
+2017-06-06 14:20:34,310 - HdinsightStartupAgent.py [3092] root - INFO - Latest version already installed on the image
+2017-06-06 14:20:34,310 - HdinsightStartupAgent.py [3092] root - INFO - Identified HdInsight PatchingAgent component. Getting Patching agent container location from component arguments
+2017-06-06 14:20:34,311 - HdinsightStartupAgent.py [3092] root - INFO - Patching agent container location retrieved from HdInsight Patching Agent component successfully
+2017-06-06 14:20:34,311 - HdinsightStartupAgent.py [3092] root - INFO - Successfully completed cluster component installation
+2017-06-06 14:20:34,311 - HdinsightStartupAgent.py [3092] root - INFO - Starting hdinsight-patching agent
+2017-06-06 14:20:34,311 - HdinsightStartupAgent.py [3092] root - INFO - Storing Service argument for service hdinsight-patchingagent
+2017-06-06 14:20:34,311 - HdinsightStartupAgent.py [3092] root - INFO - Verifying folder : /var/lib/hdinsight-patchingagent
+2017-06-06 14:20:34,385 - HdinsightStartupAgent.py [3092] root - INFO - Starting Service hdinsight-patchingagent
+2017-06-06 14:20:34,385 - HdinsightStartupAgent.py [3092] root - INFO - Checking status of hdinsight-patchingagent
+2017-06-06 14:20:34,416 - HdinsightStartupAgent.py [3092] root - INFO - hdinsight-patchingagent not running. Starting it.
+2017-06-06 14:20:34,663 - HdinsightStartupAgent.py [3092] root - INFO - 
+2017-06-06 14:20:34,664 - HdinsightStartupAgent.py [3092] root - INFO - Started hdinsight-patchingagent Service successfully
+2017-06-06 14:20:34,665 - HdinsightStartupAgent.py [3092] root - INFO - Succesully started hdinsight-patchingagent
+2017-06-06 14:20:34,665 - HdinsightStartupAgent.py [3092] root - INFO - Starting hdinsight-agent
+2017-06-06 14:20:34,665 - HdinsightStartupAgent.py [3092] root - INFO - Storing Service argument for service hdinsight-agent
+2017-06-06 14:20:34,665 - HdinsightStartupAgent.py [3092] root - INFO - Verifying folder : /var/lib/hdinsight-agent
+2017-06-06 14:20:34,734 - HdinsightStartupAgent.py [3092] root - INFO - Starting Service hdinsight-agent
+2017-06-06 14:20:34,734 - HdinsightStartupAgent.py [3092] root - INFO - Checking status of hdinsight-agent
+2017-06-06 14:20:34,766 - HdinsightStartupAgent.py [3092] root - INFO - hdinsight-agent not running. Starting it.
+2017-06-06 14:20:35,014 - HdinsightStartupAgent.py [3092] root - INFO - 
+2017-06-06 14:20:35,015 - HdinsightStartupAgent.py [3092] root - INFO - Started hdinsight-agent Service successfully
+2017-06-06 14:20:35,015 - HdinsightStartupAgent.py [3092] root - INFO - Succesfully started hdinsight-agent
+2017-06-06 14:20:35,015 - HdinsightStartupAgent.py [3092] root - INFO - Storing startupagent completion status
+2017-06-06 14:20:35,015 - HdinsightStartupAgent.py [3092] root - INFO - Registering StartupAgent execution completion
+2017-06-06 14:20:35,029 - HdinsightStartupAgent.py [3092] root - INFO - 
+2017-06-06 14:20:35,029 - HdinsightStartupAgent.py [3092] root - INFO - Registerd Startup Agent completion
+2017-06-06 14:20:35,029 - HdinsightStartupAgent.py [3092] root - INFO - Succesfully stored startupagent status
+2017-06-06 14:20:35,030 - HdinsightStartupAgent.py [3092] root - INFO - Completed StartupAgent execution : 2017-06-06 14:20:35 
