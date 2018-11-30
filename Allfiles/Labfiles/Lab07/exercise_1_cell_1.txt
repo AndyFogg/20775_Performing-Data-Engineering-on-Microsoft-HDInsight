@@ -1,0 +1,6 @@
+from pyspark.sql import Row
+text_file = sc.textFile("wasbs:////HdiSamples/HdiSamples/MahoutMovieData/user-ratings.txt")
+split_data = text_file.map(lambda line: line.split("\t")) 
+ratings = split_data.map(lambda p: Row(movieId=int(p[1]), userRating=int(p[2]) * 2, timestamp=int(p[3])))
+schemaRatings = sqlContext.createDataFrame(ratings)
+schemaRatings.registerTempTable("allUserRatings")

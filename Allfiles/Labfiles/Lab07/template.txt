@@ -1,0 +1,5 @@
+from pyspark import SparkContext, SparkConf, SQLContext
+
+conf = SparkConf().setAppName("lab-7-etl")
+sc = SparkContext(conf=conf)
+sqlContext = SQLContext(sc)

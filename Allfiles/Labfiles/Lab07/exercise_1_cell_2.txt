@@ -1,0 +1,4 @@
+output = sqlContext.sql("select * from allUserRatings limit 5")
+for eachrow in output.collect():
+  print(eachrow) 
+  
