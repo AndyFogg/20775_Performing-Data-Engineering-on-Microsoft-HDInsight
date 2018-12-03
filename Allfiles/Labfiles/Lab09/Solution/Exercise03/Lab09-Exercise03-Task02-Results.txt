@@ -1,0 +1,170 @@
+sshuser@hn0-hbaset:~$ python /usr/hdp/2.6.0.2-76/phoenix/bin/sqlline.py zk0-hbaset.pwqx1izc2riezngv1v3d5maykg.fx.internal.cloudapp.net:2181:/hbase-unsecure
+Setting property: [incremental, false]
+Setting property: [isolation, TRANSACTION_READ_COMMITTED]
+issuing: !connect jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v3d5maykg.fx.internal.cloudapp.net:2181:/hbase-unsecure none none org.apache.phoenix.jdbc.PhoenixDriver
+Connecting to jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v3d5maykg.fx.internal.cloudapp.net:2181:/hbase-unsecure
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/hdp/2.6.0.2-76/phoenix/phoenix-4.7.0.2.6.0.2-76-client.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/2.6.0.2-76/hadoop/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+17/05/19 09:39:23 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/05/19 09:39:26 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 09:39:27 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 09:39:27 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 09:39:29 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+Connected to: Phoenix (version 4.7)
+Driver: PhoenixEmbeddedDriver (version 4.7)
+Autocommit status: true
+Transaction isolation: TRANSACTION_READ_COMMITTED
+Building list of tables and columns for tab-completion (set fastconnect to true to skip)...
+84/84 (100%) Done
+Done
+sqlline version 1.1.8
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> -- Setp1: DROP HVAC table, if already exists
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> DROP TABLE IF EXISTS HVAC;
+No rows affected (0.011 seconds)
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v>
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> -- Step2: Impose a structure on HVAC Data using ExternalTable
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> CREATE TABLE HVAC
+. . . . . . . . . . . . . . . . . . . . . . .> (
+. . . . . . . . . . . . . . . . . . . . . . .>    DATE VARCHAR(20),
+. . . . . . . . . . . . . . . . . . . . . . .>    TIME VARCHAR(10),
+. . . . . . . . . . . . . . . . . . . . . . .>    TARGETTEMP INTEGER,
+. . . . . . . . . . . . . . . . . . . . . . .>    ACTUALTEMP INTEGER,
+. . . . . . . . . . . . . . . . . . . . . . .>    SYSTEM VARCHAR(20),
+. . . . . . . . . . . . . . . . . . . . . . .>    SYSTEMAGE INTEGER,
+. . . . . . . . . . . . . . . . . . . . . . .>    BUILDINGID INTEGER not null
+. . . . . . . . . . . . . . . . . . . . . . .> CONSTRAINT HEAT_PK PRIMARY KEY(DATE,TIME,SYSTEM,BUILDINGID)
+. . . . . . . . . . . . . . . . . . . . . . .> );
+No rows affected (4.315 seconds)
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v>
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> -- Step 3: Drop buildings table, if already exists
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> DROP TABLE IF EXISTS buildings;
+No rows affected (0.002 seconds)
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v>
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> -- Step 4: Impose a structure on buildings data using ExternalTable
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> CREATE TABLE BUILDINGS (
+. . . . . . . . . . . . . . . . . . . . . . .>    BUILDINGID INTEGER,
+. . . . . . . . . . . . . . . . . . . . . . .>    BUILDINGMGR VARCHAR(10),
+. . . . . . . . . . . . . . . . . . . . . . .>    BUILDINGAGE INTEGER,
+. . . . . . . . . . . . . . . . . . . . . . .>    HVACPRODUCT VARCHAR(20),
+. . . . . . . . . . . . . . . . . . . . . . .>    COUNTRY VARCHAR(30)
+. . . . . . . . . . . . . . . . . . . . . . .>    CONSTRAINT BUILD_PK PRIMARY KEY(BUILDINGID)
+. . . . . . . . . . . . . . . . . . . . . . .> );
+No rows affected (4.309 seconds)
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v>
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> !quit
+Closing: org.apache.phoenix.jdbc.PhoenixConnection
+17/05/19 09:41:29 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+
+#### Bulk Ingest into HVAC and Building Tables
+
+sshuser@hn0-hbaset:~$ cd $HOME/Lab09/Starter/Exercise03
+sshuser@hn0-hbaset:~/Lab09/Starter/Exercise03$
+sshuser@hn0-hbaset:~/Lab09/Starter/Exercise03$ python /usr/hdp/2.6.0.2-76/phoenix/bin/psql.py -t HVAC -h DATE,TIME,TARGETTEMP,ACTUALTEMP,SYSTEM,SYSTEMAGE,BUILDINGID zk0-hbaset.pwqx1izc2riezngv1v3d5maykg.fx.internal.cloudapp.net:2181:/hbase-unsecure HVAC.csv
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/hdp/2.6.0.2-76/phoenix/phoenix-4.7.0.2.6.0.2-76-client.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/2.6.0.2-76/hadoop/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+17/05/19 09:46:04 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/05/19 09:46:05 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 09:46:05 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 09:46:05 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 09:46:06 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+csv columns from user. length=7, DATE, TIME, TARGETTEMP, ACTUALTEMP, SYSTEM, SYSTEMAGE, BUILDINGID
+17/05/19 09:46:06 ERROR util.CSVCommonsLoader: Error upserting record [Date, Time, TargetTemp, ActualTemp, System, SystemAge, BuildingID]
+CSV Upsert complete. 8000 rows upserted
+Time: 1.158 sec(s)
+
+17/05/19 09:46:07 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+sshuser@hn0-hbaset:~/Lab09/Starter/Exercise03$ python /usr/hdp/2.6.0.2-76/phoenix/bin/psql.py -t BUILDINGS -h BUILDINGID,BUILDINGMGR,BUILDINGAGE,HVACPRODUCT,COUNTRY zk0-hbaset.pwqx1izc2riezngv1v3d5maykg.fx.internal.cloudapp.net:2181:/hbase-unsecure building.csv
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/hdp/2.6.0.2-76/phoenix/phoenix-4.7.0.2.6.0.2-76-client.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/2.6.0.2-76/hadoop/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+17/05/19 09:46:23 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/05/19 09:46:23 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 09:46:23 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 09:46:23 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 09:46:24 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+csv columns from user. length=5, BUILDINGID, BUILDINGMGR, BUILDINGAGE, HVACPRODUCT, COUNTRY
+17/05/19 09:46:24 ERROR util.CSVCommonsLoader: Error upserting record [BuildingID, BuildingMgr, BuildingAge, HVACproduct, Country]
+CSV Upsert complete. 20 rows upserted
+Time: 0.065 sec(s)
+
+17/05/19 09:46:25 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+
+#### Verify Bulk Ingets for HVAC and Building Tables
+sshuser@hn0-hbaset:~/Lab09/Starter/Exercise03$ python /usr/hdp/2.6.0.2-76/phoenix/bin/sqlline.py zk0-hbaset.pwqx1izc2riezngv1v3d5maykg.fx.internal.cloudapp.net:2181:/hbase-unsecure
+Setting property: [incremental, false]
+Setting property: [isolation, TRANSACTION_READ_COMMITTED]
+issuing: !connect jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v3d5maykg.fx.internal.cloudapp.net:2181:/hbase-unsecure none none org.apache.phoenix.jdbc.PhoenixDriver
+Connecting to jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v3d5maykg.fx.internal.cloudapp.net:2181:/hbase-unsecure
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/hdp/2.6.0.2-76/phoenix/phoenix-4.7.0.2.6.0.2-76-client.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/2.6.0.2-76/hadoop/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+17/05/19 09:48:08 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/05/19 09:48:09 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 09:48:09 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 09:48:09 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 09:48:10 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+Connected to: Phoenix (version 4.7)
+Driver: PhoenixEmbeddedDriver (version 4.7)
+Autocommit status: true
+Transaction isolation: TRANSACTION_READ_COMMITTED
+Building list of tables and columns for tab-completion (set fastconnect to true to skip)...
+96/96 (100%) Done
+Done
+sqlline version 1.1.8
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> -- Step 1: count the number of records in the table
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> SELECT COUNT(*) FROM HVAC;
++-----------+
+| COUNT(1)  |
++-----------+
+| 7979      |
++-----------+
+1 row selected (0.106 seconds)
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> SELECT COUNT(*) FROM BUILDINGS;
++-----------+
+| COUNT(1)  |
++-----------+
+| 20        |
++-----------+
+1 row selected (0.027 seconds)
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v>
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> -- Step 2: Fetch 10 records from each of the table
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> SELECT * FROM HVAC LIMIT 10;
++---------+----------+-------------+-------------+---------+------------+-------------+
+|  DATE   |   TIME   | TARGETTEMP  | ACTUALTEMP  | SYSTEM  | SYSTEMAGE  | BUILDINGID  |
++---------+----------+-------------+-------------+---------+------------+-------------+
+| 6/1/13  | 0:00:01  | 66          | 58          | 13      | 20         | 4           |
+| 6/1/13  | 0:00:01  | 69          | 55          | 14      | 6          | 17          |
+| 6/1/13  | 0:00:01  | 69          | 58          | 18      | 8          | 12          |
+| 6/1/13  | 0:00:01  | 69          | 60          | 5       | 8          | 7           |
+| 6/1/13  | 0:33:07  | 66          | 73          | 19      | 8          | 12          |
+| 6/1/13  | 0:33:07  | 65          | 68          | 3       | 29         | 20          |
+| 6/1/13  | 0:33:07  | 65          | 69          | 5       | 19         | 5           |
+| 6/1/13  | 0:33:07  | 65          | 72          | 9       | 12         | 8           |
+| 6/1/13  | 0:43:51  | 70          | 72          | 10      | 19         | 8           |
+| 6/1/13  | 0:43:51  | 67          | 70          | 10      | 2          | 20          |
++---------+----------+-------------+-------------+---------+------------+-------------+
+10 rows selected (0.092 seconds)
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> SELECT * FROM BUILDINGS LIMIT 10;
++-------------+--------------+--------------+--------------+---------------+
+| BUILDINGID  | BUILDINGMGR  | BUILDINGAGE  | HVACPRODUCT  |    COUNTRY    |
++-------------+--------------+--------------+--------------+---------------+
+| 1           | M1           | 25           | AC1000       | USA           |
+| 2           | M2           | 27           | FN39TG       | France        |
+| 3           | M3           | 28           | JDNS77       | Brazil        |
+| 4           | M4           | 17           | GG1919       | Finland       |
+| 5           | M5           | 3            | ACMAX22      | Hong Kong     |
+| 6           | M6           | 9            | AC1000       | Singapore     |
+| 7           | M7           | 13           | FN39TG       | South Africa  |
+| 8           | M8           | 25           | JDNS77       | Australia     |
+| 9           | M9           | 11           | GG1919       | Mexico        |
+| 10          | M10          | 23           | ACMAX22      | China         |
++-------------+--------------+--------------+--------------+---------------+
+10 rows selected (0.052 seconds)
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v>
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v>

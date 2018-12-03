@@ -1,0 +1,146 @@
+sshuser@hn0-hbaset:~/Lab09/Starter/Exercise03$ python /usr/hdp/2.6.0.2-76/phoenix/bin/sqlline.py zk0-hbaset.pwqx1izc2riezngv1v3d5maykg.fx.internal.cloudapp.net:2181:/hbase-unsecure
+Setting property: [incremental, false]
+Setting property: [isolation, TRANSACTION_READ_COMMITTED]
+issuing: !connect jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v3d5maykg.fx.internal.cloudapp.net:2181:/hbase-unsecure none none org.apache.phoenix.jdbc.PhoenixDriver
+Connecting to jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v3d5maykg.fx.internal.cloudapp.net:2181:/hbase-unsecure
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/hdp/2.6.0.2-76/phoenix/phoenix-4.7.0.2.6.0.2-76-client.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/hdp/2.6.0.2-76/hadoop/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+17/05/19 10:22:50 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/05/19 10:22:51 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 10:22:51 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 10:22:51 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+17/05/19 10:22:51 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
+Connected to: Phoenix (version 4.7)
+Driver: PhoenixEmbeddedDriver (version 4.7)
+Autocommit status: true
+Transaction isolation: TRANSACTION_READ_COMMITTED
+Building list of tables and columns for tab-completion (set fastconnect to true to skip)...
+96/96 (100%) Done
+Done
+sqlline version 1.1.8
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> -- Step 1a: Fetch the number of countries using the HVAC products
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> -- Step 1b: Count the number of countries using the HVAC products
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> SELECT DISTINCT COUNTRY FROM BUILDINGS;
++---------------+
+|    COUNTRY    |
++---------------+
+| Argentina     |
+| Australia     |
+| Belgium       |
+| Brazil        |
+| Canada        |
+| China         |
+| Egypt         |
+| Finland       |
+| France        |
+| Germany       |
+| Hong Kong     |
+| Indonesia     |
+| Israel        |
+| Mexico        |
+| Saudi Arabia  |
+| Singapore     |
+| South Africa  |
+| Turkey        |
+| USA           |
++---------------+
+19 rows selected (0.081 seconds)
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> SELECT COUNT(DISTINCT COUNTRY) FROM BUILDINGS;
++--------------------------+
+| DISTINCT_COUNT(COUNTRY)  |
++--------------------------+
+| 19                       |
++--------------------------+
+1 row selected (0.018 seconds)
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v>
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> -- Step 2: Write a query to determine temperatures and other columns for building number 17 on 06/09/13
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> SELECT *
+. . . . . . . . . . . . . . . . . . . . . . .> FROM HVAC
+. . . . . . . . . . . . . . . . . . . . . . .> WHERE BUILDINGID=17 AND DATE='6/9/13';
++---------+-----------+-------------+-------------+---------+------------+-------------+
+|  DATE   |   TIME    | TARGETTEMP  | ACTUALTEMP  | SYSTEM  | SYSTEMAGE  | BUILDINGID  |
++---------+-----------+-------------+-------------+---------+------------+-------------+
+| 6/9/13  | 0:13:20   | 65          | 61          | 12      | 2          | 17          |
+| 6/9/13  | 10:45:56  | 69          | 77          | 13      | 11         | 17          |
+| 6/9/13  | 15:33:07  | 65          | 73          | 8       | 22         | 17          |
+| 6/9/13  | 17:00:01  | 67          | 62          | 13      | 5          | 17          |
+| 6/9/13  | 18:45:56  | 67          | 70          | 13      | 16         | 17          |
+| 6/9/13  | 23:45:56  | 68          | 72          | 20      | 22         | 17          |
+| 6/9/13  | 2:13:19   | 69          | 59          | 20      | 5          | 17          |
+| 6/9/13  | 5:00:01   | 66          | 66          | 13      | 20         | 17          |
+| 6/9/13  | 6:13:19   | 70          | 64          | 14      | 19         | 17          |
+| 6/9/13  | 6:33:07   | 69          | 68          | 18      | 5          | 17          |
+| 6/9/13  | 6:43:51   | 67          | 79          | 6       | 12         | 17          |
+| 6/9/13  | 7:00:01   | 69          | 70          | 11      | 2          | 17          |
+| 6/9/13  | 8:33:07   | 68          | 68          | 14      | 19         | 17          |
+| 6/9/13  | 8:33:07   | 67          | 77          | 15      | 8          | 17          |
+| 6/9/13  | 8:33:07   | 70          | 59          | 7       | 3          | 17          |
+| 6/9/13  | 8:43:51   | 65          | 77          | 13      | 17         | 17          |
+| 6/9/13  | 8:43:51   | 69          | 59          | 15      | 3          | 17          |
+| 6/9/13  | 8:45:56   | 69          | 55          | 13      | 15         | 17          |
++---------+-----------+-------------+-------------+---------+------------+-------------+
+18 rows selected (0.099 seconds)
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v>
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> -- Step 3: Write a query to determine maximum and minimum target and actual temperatures
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> SELECT min(TARGETTEMP) AS MIN_TARGETTEMP,
+. . . . . . . . . . . . . . . . . . . . . . .>        max(TARGETTEMP) AS MAX_TARGETTEMP,
+. . . . . . . . . . . . . . . . . . . . . . .>        min(ACTUALTEMP) AS MIN_ACTUALTEMP,
+. . . . . . . . . . . . . . . . . . . . . . .>        max(ACTUALTEMP) AS MAX_ACTUALTEMP
+. . . . . . . . . . . . . . . . . . . . . . .> FROM HVAC;
++-----------------+-----------------+-----------------+-----------------+
+| MIN_TARGETTEMP  | MAX_TARGETTEMP  | MIN_ACTUALTEMP  | MAX_ACTUALTEMP  |
++-----------------+-----------------+-----------------+-----------------+
+| 65              | 70              | 55              | 80              |
++-----------------+-----------------+-----------------+-----------------+
+1 row selected (0.103 seconds)
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v>
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> -- Step 4: Write a query to identify the countries where Actual temperature reached maximum of 80 on 6/11/13.
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> SELECT B.COUNTRY, A.DATE, MAX(A.ACTUALTEMP)
+. . . . . . . . . . . . . . . . . . . . . . .> FROM HVAC A
+. . . . . . . . . . . . . . . . . . . . . . .> INNER JOIN
+. . . . . . . . . . . . . . . . . . . . . . .> BUILDINGS B
+. . . . . . . . . . . . . . . . . . . . . . .> ON A.BUILDINGID = B.BUILDINGID
+. . . . . . . . . . . . . . . . . . . . . . .> WHERE A.DATE = '6/11/13'
+. . . . . . . . . . . . . . . . . . . . . . .> GROUP BY B.COUNTRY,
+. . . . . . . . . . . . . . . . . . . . . . .>          A.DATE
+. . . . . . . . . . . . . . . . . . . . . . .> HAVING MAX(A.ACTUALTEMP)=80;
++---------------+----------+--------------------+
+|   B.COUNTRY   |  A.DATE  | MAX(A.ACTUALTEMP)  |
++---------------+----------+--------------------+
+| Argentina     | 6/11/13  | 80                 |
+| Canada        | 6/11/13  | 80                 |
+| China         | 6/11/13  | 80                 |
+| Finland       | 6/11/13  | 80                 |
+| South Africa  | 6/11/13  | 80                 |
+| Turkey        | 6/11/13  | 80                 |
++---------------+----------+--------------------+
+6 rows selected (0.114 seconds)
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v>
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> -- Step 5: Write a query to identify the countries where Actual temperature reached minimum of 55 on 6/11/13.
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> SELECT B.COUNTRY, A.DATE, MIN(A.ACTUALTEMP)
+. . . . . . . . . . . . . . . . . . . . . . .> FROM HVAC A
+. . . . . . . . . . . . . . . . . . . . . . .> INNER JOIN
+. . . . . . . . . . . . . . . . . . . . . . .> BUILDINGS B
+. . . . . . . . . . . . . . . . . . . . . . .> ON A.BUILDINGID = B.BUILDINGID
+. . . . . . . . . . . . . . . . . . . . . . .> WHERE A.DATE = '6/11/13'
+. . . . . . . . . . . . . . . . . . . . . . .> GROUP BY B.COUNTRY,
+. . . . . . . . . . . . . . . . . . . . . . .>          A.DATE
+. . . . . . . . . . . . . . . . . . . . . . .> HAVING MIN(A.ACTUALTEMP)=55;
++---------------+----------+--------------------+
+|   B.COUNTRY   |  A.DATE  | MIN(A.ACTUALTEMP)  |
++---------------+----------+--------------------+
+| Brazil        | 6/11/13  | 55                 |
+| China         | 6/11/13  | 55                 |
+| Egypt         | 6/11/13  | 55                 |
+| Finland       | 6/11/13  | 55                 |
+| Germany       | 6/11/13  | 55                 |
+| Singapore     | 6/11/13  | 55                 |
+| South Africa  | 6/11/13  | 55                 |
+| Turkey        | 6/11/13  | 55                 |
++---------------+----------+--------------------+
+8 rows selected (0.061 seconds)
+0: jdbc:phoenix:zk0-hbaset.pwqx1izc2riezngv1v> !quit
+Closing: org.apache.phoenix.jdbc.PhoenixConnection
+17/05/19 10:23:45 WARN conf.Configuration: hbase-site.xml:an attempt to override final parameter: dfs.support.append;  Ignoring.
