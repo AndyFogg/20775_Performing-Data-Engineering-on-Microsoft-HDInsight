@@ -1,0 +1,32 @@
+%livy.spark
+ //The above magic instructs Zeppelin to use the Livy Scala interpreter
+
+ // Create an RDD using the default Spark context, sc
+ val hvacText = sc.textFile("wasbs:///HdiSamples/HdiSamples/SensorSampleData/hvac/HVAC.csv")
+
+ // Define a schema
+ case class Hvac(date: String, time: String, targettemp: Integer, actualtemp: Integer, buildingID: String)
+
+ // Map the values in the .csv file to the schema
+ val hvac = hvacText.map(s => s.split(",")).filter(s => s(0) != "Date").map(
+     s => Hvac(s(0), 
+             s(1),
+             s(2).toInt,
+             s(3).toInt,
+             s(6)
+     )
+ ).toDF()
+
+ // Register as a temporary table called "hvac"
+ hvac.registerTempTable("hvac")
+
+ 
+//first query 
+%sql
+ select buildingID, (targettemp - actualtemp) as temp_diff, date from hvac where date > "6/1/13" 
+ 
+ 
+//second query 
+%sql
+ select buildingID, date, targettemp, (targettemp - actualtemp) as temp_diff from hvac where targettemp > "${Temp = 65,65|68|70}" 
+
