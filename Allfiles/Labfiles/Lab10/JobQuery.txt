@@ -1,0 +1,7 @@
+Select
+    dspl,
+    min(hmdt) as min_hmdt,
+    max(hmdt) as max_hmdt
+INTO LabOutput
+FROM LabInput
+GROUP BY dspl, TUMBLINGWINDOW(mi, 1)
