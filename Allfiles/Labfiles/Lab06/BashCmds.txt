@@ -1,0 +1,30 @@
+azure storage account list
+
+export AZURE_STORAGE_ACCOUNT=<storage account>
+
+export AZURE_STORAGE_ACCESS_KEY=<primary key>
+
+azure storage blob list <container>
+
+ls
+
+cd clouddrive
+
+azure storage blob download <container> example/data/fruits.txt fruits.txt
+
+ls
+
+nano
+
+ls
+
+azure storage account list
+
+export AZURE_STORAGE_ACCOUNT=<storage account>
+
+export AZURE_STORAGE_ACCESS_KEY=<primary key>
+
+cd clouddrive
+
+azure storage blob upload worknotes.txt <container> example/data/worknotes.txt
+
